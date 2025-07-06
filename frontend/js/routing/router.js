@@ -3,6 +3,7 @@ import { CategoryPage } from "../pages/category.js";
 import { DetailsPage } from "../pages/details.js";
 import { TelegramSDK } from "../telegram/telegram.js";
 import { CartPage } from "../pages/cart.js";
+import { CheckoutPage } from "../pages/checkout.js";
 import { Snackbar } from "../utils/snackbar.js";
 
 /**
@@ -12,7 +13,8 @@ const availableRoutes = [
     new MainPage(),
     new CategoryPage(),
     new DetailsPage(),
-    new CartPage()
+    new CartPage(),
+    new CheckoutPage()
 ]
 
 /**

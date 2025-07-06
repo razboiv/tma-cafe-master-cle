@@ -1,2 +1,8 @@
 # Local Netlify folder
 .netlify
+instance/
+backend/orders.db
+certbot/certs/*
+!certbot/certs/.gitkeep
+certbot/www/*
+!certbot/www/.gitkeep

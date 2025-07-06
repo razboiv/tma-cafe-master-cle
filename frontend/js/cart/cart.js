@@ -85,6 +85,20 @@ export class Cart {
     }
 
     /**
+     * @returns Total cost of all cart items.
+     */
+    static getTotalCost() {
+        return this.#cartItems.reduce((sum, item) => sum + item.variant.cost * item.quantity, 0);
+    }
+
+    /**
+     * @returns Display representation of total cost.
+     */
+    static getDisplayTotalCost() {
+        return toDisplayCost(this.getTotalCost());
+    }
+
+    /**
      * Add new Cafe item to the Cart, if the Cart item with this configuration (Cafe item + variant)
      * doesn't exist in the Cart, or just update the existing Cart item quantity.
      * @param {map} cafeItem Map representation of Cafe item.

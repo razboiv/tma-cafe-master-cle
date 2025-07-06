@@ -1,0 +1,16 @@
+<section>
+    <form id="checkout-form" class="checkout-form">
+        <label>Имя
+            <input id="checkout-name" type="text" required />
+        </label>
+        <label>Телефон
+            <input id="checkout-phone" type="tel" pattern="^\+?\d{10,15}$" required />
+        </label>
+        <div class="pay-method-container">
+            <span>Способ оплаты</span>
+            <label><input type="radio" name="pay-method" value="Наличными" checked /> Наличными</label>
+            <label><input type="radio" name="pay-method" value="Картой" /> Картой</label>
+        </div>
+        <button id="checkout-submit" class="checkout-button" type="submit">Отправить заказ</button>
+    </form>
+</section>

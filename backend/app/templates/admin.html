@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Админ-панель: Товары</title>
+</head>
+<body>
+    <h1>Админ-панель: Товары</h1>
+    {% if errors %}
+    <ul style="color:red">
+        {% for err in errors %}
+        <li>{{ err }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <table border="1" cellpadding="4" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Категория</th>
+            <th>Название</th>
+            <th>Цена</th>
+            <th>Скидка</th>
+            <th>Описание</th>
+        </tr>
+        {% for p in products %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.category_id }}</td>
+            <td>{{ p.name }}</td>
+            <td>{{ p.price }}</td>
+            <td>{{ p.discount }}</td>
+            <td>{{ p.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>Добавить товар</h2>
+    <form method="post">
+        <div>
+            <label>Категория
+                <input type="text" name="category_id" required>
+            </label>
+        </div>
+        <div>
+            <label>Название
+                <input type="text" name="name" required>
+            </label>
+        </div>
+        <div>
+            <label>Описание
+                <textarea name="description" required></textarea>
+            </label>
+        </div>
+        <div>
+            <label>Цена
+                <input type="number" step="0.01" name="price" required>
+            </label>
+        </div>
+        <div>
+            <label>Скидка (%)
+                <input type="number" name="discount" min="0" max="100" value="0">
+            </label>
+        </div>
+        <div>
+            <label>URL фото
+                <input type="text" name="image_url" required>
+            </label>
+        </div>
+        <div>
+            <label>Галерея фото
+                <input type="text" name="gallery">
+            </label>
+        </div>
+        <button type="submit">Добавить товар</button>
+    </form>
+</body>
+</html>

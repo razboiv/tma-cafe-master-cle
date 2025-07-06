@@ -37,7 +37,7 @@ $.fn.clickWithRipple = function(callback) {
         );
 
         if (callback != null) {
-            callback();
+            callback(e);
         }
     });
 }

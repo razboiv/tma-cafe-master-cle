@@ -2,8 +2,8 @@
     <div id="cart-items" class="cart-items-container"></div>
     <div id="cart-empty-placeholder" class="cart-empty-placeholder">
         <div id="cart-empty-placeholder-icon"></div>
-        <h3>Your cart is empty</h3>
-        <p>It's time to order something delicious!</p>
+        <h3>Ваша корзина пуста</h3>
+        <p>Самое время заказать что-нибудь вкусное!</p>
     </div>
 
     <template id="cart-item-template">
@@ -11,7 +11,7 @@
             <img id="cart-item-image" class="cart-item-image"/>
             <div class="cart-item-info-container">
                 <h6 id="cart-item-name" class="cart-item-name"></h6>
-                <p id="cart-item-description" class="small cart-item-description">Small</p>
+                <p id="cart-item-description" class="small cart-item-description">Маленький</p>
                 <div id="cart-item-cost" class="cart-item-cost">$2.00</div>
             </div>
             <div class="cart-item-quantity-container">
@@ -21,4 +21,8 @@
             </div>
         </div>
     </template>
+    <div id="cart-summary" class="cart-summary" style="display: none;">
+        <div class="cart-total">Итого: <span id="cart-total-cost">0₽</span></div>
+        <button id="checkout-button" class="checkout-button">Оформить заказ</button>
+    </div>
 </section>

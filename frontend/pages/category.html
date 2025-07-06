@@ -1,40 +1,50 @@
 <section>
-    <div id="cafe-category" class="cafe-section-vertical">
-        <div class="cafe-item-container">
-            <img id="cafe-item-image" class="cafe-item-image shimmer" src="icons/icon-transparent.svg"></img>
-            <h6 id="cafe-item-name" class="cafe-item-name shimmer"></h6>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 90%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 100%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 75%;"></p>
+        <div id="cafe-category" class="cafe-section-vertical">
+            <div class="product-card">
+                <img id="cafe-item-image" class="product-image shimmer" src="icons/icon-transparent.svg" />
+                <h6 id="cafe-item-name" class="product-name shimmer"></h6>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 90%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 100%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 75%;"></p>
+            </div>
+            <div class="product-card">
+                <img id="cafe-item-image" class="product-image shimmer" src="icons/icon-transparent.svg" />
+                <h6 id="cafe-item-name" class="product-name shimmer"></h6>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 90%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 100%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 75%;"></p>
+            </div>
+            <div class="product-card">
+                <img id="cafe-item-image" class="product-image shimmer" src="icons/icon-transparent.svg" />
+                <h6 id="cafe-item-name" class="product-name shimmer"></h6>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 90%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 100%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 75%;"></p>
+            </div>
+            <div class="product-card">
+                <img id="cafe-item-image" class="product-image shimmer" src="icons/icon-transparent.svg" />
+                <h6 id="cafe-item-name" class="product-name shimmer"></h6>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 90%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 100%;"></p>
+                <p id="cafe-item-description" class="small product-description shimmer" style="min-width: 75%;"></p>
+            </div>
         </div>
-        <div class="cafe-item-container">
-            <img id="cafe-item-image" class="cafe-item-image shimmer" src="icons/icon-transparent.svg"></img>
-            <h6 id="cafe-item-name" class="cafe-item-name shimmer"></h6>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 90%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 100%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 75%;"></p>
-        </div>
-        <div class="cafe-item-container">
-            <img id="cafe-item-image" class="cafe-item-image shimmer" src="icons/icon-transparent.svg"></img>
-            <h6 id="cafe-item-name" class="cafe-item-name shimmer"></h6>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 90%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 100%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 75%;"></p>
-        </div>
-        <div class="cafe-item-container">
-            <img id="cafe-item-image" class="cafe-item-image shimmer" src="icons/icon-transparent.svg"></img>
-            <h6 id="cafe-item-name" class="cafe-item-name shimmer"></h6>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 90%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 100%;"></p>
-            <p id="cafe-item-description" class="small cafe-item-description shimmer" style="min-width: 75%;"></p>
-        </div>
-    </div>
 
     <template id="cafe-item-template">
-        <div class="cafe-item-container">
-            <img id="cafe-item-image" class="cafe-item-image"/>
-            <h6 id="cafe-item-name" class="cafe-item-name"></h6>
-            <p id="cafe-item-description" class="small cafe-item-description"></p>
+        <div class="product-card">
+            <img id="cafe-item-image" class="product-image" />
+            <div class="product-info">
+                <h6 id="cafe-item-name" class="product-name"></h6>
+                <p id="cafe-item-description" class="small product-description"></p>
+                <p id="cafe-item-price" class="product-price"></p>
+                <div class="product-quantity-container">
+                    <span class="product-quantity-label">Кол-во:</span>
+                    <button class="material-symbols-rounded icon-button small product-quantity-decrement">remove</button>
+                    <span class="product-quantity-value">0</span>
+                    <button class="material-symbols-rounded icon-button small product-quantity-increment">add</button>
+                </div>
+                <button class="add-to-cart-button">В корзину</button>
+            </div>
         </div>
     </template>
 </section>

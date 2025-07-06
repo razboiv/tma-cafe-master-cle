@@ -73,4 +73,11 @@ export class TelegramSDK {
         Telegram.WebApp.close();
     }
 
+    static sendData(data) {
+        Telegram.WebApp.sendData(data);
+    }
+
+    static showAlert(text, callback) {
+        Telegram.WebApp.showAlert(text, callback);
+    }
 }

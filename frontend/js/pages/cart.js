@@ -1,7 +1,7 @@
 import { Cart } from "../cart/cart.js"
 import { post } from "../requests/requests.js";
 import { Route } from "../routing/route.js";
-import { showSnackbar } from "../routing/router.js";
+import { showSnackbar, navigateTo } from "../routing/router.js";
 import { TelegramSDK } from "../telegram/telegram.js";
 import { loadImage } from "../utils/dom.js";
 
@@ -20,6 +20,9 @@ export class CartPage extends Route {
         this.#loadLottie();
         // Refresh UI when Cart was updated.
         Cart.onItemsChangeListener = (cartItems) => this.#fillCartItems(cartItems);
+        $('#checkout-button').on('click', () => {
+            navigateTo('checkout');
+        });
         this.#loadCartItems()
     }
 
@@ -92,13 +95,12 @@ export class CartPage extends Route {
 
     #updateMainButton(cartItems) {
         if (cartItems.length > 0) {
-            TelegramSDK.showMainButton('CHECKOUT', () => {
-                TelegramSDK.setMainButtonLoading(true);
-                this.#createOrder(cartItems);
-            });
+            $('#cart-summary').show();
+            this.#updateTextWithBoop($('#cart-total-cost'), Cart.getDisplayTotalCost());
+            $('#checkout-button').prop('disabled', false);
         } else {
-            TelegramSDK.setMainButtonLoading(false);
-            TelegramSDK.hideMainButton();
+            $('#cart-summary').hide();
+            $('#checkout-button').prop('disabled', true);
         }
     }
 
@@ -123,9 +125,11 @@ export class CartPage extends Route {
             if (result.ok) {
                 TelegramSDK.openInvoice(result.data.invoiceUrl, (status) => {
                     this.#handleInvoiceStatus(status);
+                    $('#checkout-button').prop('disabled', false);
                 });
             } else {
                 showSnackbar(result.error, 'error');
+                $('#checkout-button').prop('disabled', false);
             }
         });
     }
@@ -135,11 +139,11 @@ export class CartPage extends Route {
             Cart.clear();
             TelegramSDK.close();
         } else if (status == 'failed') {
-            TelegramSDK.setMainButtonLoading(false);
-            showSnackbar('Something went wrong, payment is unsuccessful :(', 'error');
+            showSnackbar('Что-то пошло не так, платеж не прошёл :(', 'error');
+            $('#checkout-button').prop('disabled', false);
         } else {
-            TelegramSDK.setMainButtonLoading(false);
-            showSnackbar('The order was cancelled.', 'warning');
+            showSnackbar('Заказ был отменён.', 'warning');
+            $('#checkout-button').prop('disabled', false);
         }
     }
 

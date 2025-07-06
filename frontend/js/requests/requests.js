@@ -31,6 +31,6 @@ export function post(endpoint, data, onResult) {
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         success: result => onResult({ ok: true, data: result}),
-        error: xhr => onResult({ ok: false, error: 'Something went wrong.'})
+        error: xhr => onResult({ ok: false, error: 'Что-то пошло не так.'})
     })
 }

@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    env_file: .env
+    volumes:
+      - ./backend/orders.db:/app/backend/orders.db
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/certs:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/certs:/etc/letsencrypt
+    command: >
+      certonly --webroot --webroot-path=/var/www/certbot \
+      --email you@example.com --agree-tos --no-eff-email \
+      -d ${DOMAIN}
+    depends_on:
+      - nginx

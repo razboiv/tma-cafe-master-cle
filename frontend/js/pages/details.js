@@ -69,7 +69,7 @@ export class DetailsPage extends Route {
         $('#cafe-item-details-quantity-increase-button').clickWithRipple(() => this.#increaseQuantity());
 
         TelegramSDK.showMainButton(
-            'ADD TO CART',
+            'ДОБАВИТЬ В КОРЗИНУ',
             () => {
                 Cart.addItem(menuItem, this.#selectedVariant, this.#selectedQuantity);
                 this.#showSuccessSnackbar();
@@ -129,7 +129,7 @@ export class DetailsPage extends Route {
     #showSuccessSnackbar() {
         Snackbar.showSnackbar(
             'cafe-item-details-container',
-            'Successfully added to cart!',
+            'Успешно добавлено в корзину!',
             {
                 bottom: '80px',
                 'background-color': 'var(--success-color)'

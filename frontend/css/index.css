@@ -306,6 +306,89 @@ p.small {
     margin-top: 2px;
 }
 
+/* Product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    max-width: 320px;
+    padding: 12px;
+    background-color: var(--popover-bg-color);
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.product-info {
+    margin-top: 8px;
+}
+
+.product-price {
+    margin-top: 4px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.product-quantity-container {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    gap: 4px;
+}
+
+.product-quantity-label {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.product-quantity-value {
+    min-width: 24px;
+    text-align: center;
+}
+
+.add-to-cart-button {
+    margin-top: 8px;
+    padding: 8px;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-accent-color);
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:active {
+    opacity: 0.8;
+}
+
+@media (min-width: 600px) {
+    .product-card {
+        flex-basis: calc(50% - 16px);
+    }
+}
+
+@media (min-width: 900px) {
+    .product-card {
+        flex-basis: calc(33.333% - 16px);
+    }
+}
+
 
 
 /* Cafe item details */
@@ -420,6 +503,7 @@ p.small {
 
 .cart-items-container {
     height: 100vh;
+    padding-bottom: 160px;
 }
 
 .cart-item-container {
@@ -502,6 +586,41 @@ p.small {
     text-align: center;
 }
 
+.cart-summary {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background-color: var(--bg-color);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-total {
+    margin-bottom: 12px;
+    text-align: right;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--on-accent-color);
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.checkout-button:active {
+    opacity: 0.8;
+}
+
 
 
 /* Common (effect, animations, etc.) */
@@ -559,4 +678,40 @@ p.small {
     100% {
         background-position: 1200px 0;
     }
+}
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.checkout-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"] {
+    margin-top: 4px;
+    padding: 8px;
+    border: 1px solid var(--divider-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.pay-method-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.pay-method-container label {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
