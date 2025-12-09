@@ -131,7 +131,7 @@ def create_invoice_link(prices) -> str:
         description='Great choice! Last steps and we will get to cooking ;)',
         payload='orderID',
         provider_token=PAYMENT_PROVIDER_TOKEN,
-        currency='USD',
+        currency='RUB',
         prices=prices,
         need_name=True,
         need_phone_number=True,
