@@ -12,7 +12,8 @@ from telebot.types import LabeledPrice
 # in the .env file directly.
 load_dotenv()
 
-
+# рубли -> копейки (целые в минимальных единицах)
+PRICE_MULTIPLIER = int(os.getenv("PRICE_MULTIPLIER", "100"))
 
 app = Flask(__name__)
 # Handle paths like '/info/' and '/info' as the same.
@@ -143,7 +144,7 @@ def create_order():
         variant = order_item['variant']['name']
         cost = order_item['variant']['cost']
         quantity = order_item['quantity']
-        price = int(cost) * int(quantity)
+        price = int(cost) * PRICE_MULTIPLIER * int(quantity)  # => копейки, целое число
         labeled_price = LabeledPrice(
             label=f'{name} ({variant}) x{quantity}',
             amount=price
