@@ -1,6 +1,6 @@
 // Set base URL depending on your environment.
 // Don't forget to add it to allowed origins on backend.
-const baseUrl = 'https://web-production-razboiv.up.railway.app/';
+const baseUrl = 'https://web-production-razboiv.up.railway.app';
 
 /**
  * Performs GET request.
