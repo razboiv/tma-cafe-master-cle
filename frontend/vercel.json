@@ -1,7 +1,6 @@
 {
   "rewrites": [
     { "source": "/api/:path*", "destination": "https://web-production-razboiv.up.railway.app/:path*" },
-
     { "source": "/vendor/jquery.min.js", "destination": "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" },
     { "source": "/vendor/jquery.transit.min.js", "destination": "https://ricostacruz.com/jquery.transit/jquery.transit.min.js" },
     { "source": "/vendor/lottie.min.js", "destination": "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js" }
