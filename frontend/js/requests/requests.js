@@ -1,6 +1,6 @@
 // Set base URL depending on your environment.
 // Don't forget to add it to allowed origins on backend.
-const baseUrl = 'https://api.luvcore.shop';
+const baseUrl = 'https://www.luvcore.shop/api';
 
 /**
  * Performs GET request.
