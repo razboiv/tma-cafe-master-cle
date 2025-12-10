@@ -1,7 +1,7 @@
 // Set base URL depending on your environment.
 // Don't forget to add it to allowed origins on backend.
 // ПРОД: через Vercel-прокси (/api), ЛОКАЛЬНО/другое — напрямую на Railway
-const baseUrl = '/api'; // без завершающего слэша
+const baseUrl = 'https://api.luvcore.shop';
 
 /**
  * Performs GET request.
