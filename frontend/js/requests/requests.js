@@ -2,6 +2,8 @@
 // Don't forget to add it to allowed origins on backend.
 // ПРОД: через Vercel-прокси (/api), ЛОКАЛЬНО/другое — напрямую на Railway
 const baseUrl = '/api';
+const join = (a,b)=>a.replace(/\/+$/,'')+'/'+String(b||'').replace(/^\/+/,'');
+// И используем join(baseUrl, endpoint) вместо просто baseUrl + endpoint
 
 /**
  * Performs GET request.
