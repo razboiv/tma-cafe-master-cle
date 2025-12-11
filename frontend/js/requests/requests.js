@@ -1,9 +1,6 @@
 // Set base URL depending on your environment.
 // Don't forget to add it to allowed origins on backend.
-// ПРОД: через Vercel-прокси (/api), ЛОКАЛЬНО/другое — напрямую на Railway
-const baseUrl = '/api';
-const join = (a,b)=>a.replace(/\/+$/,'')+'/'+String(b||'').replace(/^\/+/,'');
-// И используем join(baseUrl, endpoint) вместо просто baseUrl + endpoint
+const baseUrl = 'https://tma-cafe-master-cle.vercel.app';
 
 /**
  * Performs GET request.
@@ -11,10 +8,8 @@ const join = (a,b)=>a.replace(/\/+$/,'')+'/'+String(b||'').replace(/^\/+/,'');
  * @param {*} onSuccess Callback on successful request.
  */
 export function get(endpoint, onSuccess) {
-    const join = (a, b) =>
-   a.replace(/\/+$/, '') + '/' + String(b || '').replace(/^\/+/, '');
- $.ajax({
-   url: join(baseUrl, endpoint),
+    $.ajax({
+        url: baseUrl + endpoint,
         dataType: "json",
         success: result => onSuccess(result)
     });
