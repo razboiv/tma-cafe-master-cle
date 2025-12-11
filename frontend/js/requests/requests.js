@@ -9,8 +9,10 @@ const baseUrl = '/api';
  * @param {*} onSuccess Callback on successful request.
  */
 export function get(endpoint, onSuccess) {
-    $.ajax({
-        url: baseUrl + endpoint,
+    const join = (a, b) =>
+   a.replace(/\/+$/, '') + '/' + String(b || '').replace(/^\/+/, '');
+ $.ajax({
+   url: join(baseUrl, endpoint),
         dataType: "json",
         success: result => onSuccess(result)
     });
