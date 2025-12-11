@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/u/:path*", "destination": "https://images.unsplash.com/:path*" }
+  ]
+}
