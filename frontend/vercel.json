@@ -1,8 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/info",        "destination": "https://api.luvcore.shop/info" },
-    { "source": "/api/categories",  "destination": "https://api.luvcore.shop/categories" },
-    { "source": "/api/menu/:path*", "destination": "https://api.luvcore.shop/menu/:path*" },
-    { "source": "/api/order",       "destination": "https://api.luvcore.shop/order" }
+    { "source": "/api/:path*", "destination": "https://api.luvcore.shop/:path*" }
   ]
 }
