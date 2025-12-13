@@ -1,28 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <!-- Зеркалим вправо->влево -->
-  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+  <!-- зеркалим вправо->влево, цвет берётся из currentColor -->
+  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
      vector-effect="non-scaling-stroke" transform="scale(-1,1) translate(-24,0)">
 
-    <!-- Подошва -->
-    <path d="M3 19H21"/>
-    <path d="M3 17H21"/>
+    <!-- Подошва (двойная, как на рефе) -->
+    <path d="M3 20H21"/>
+    <path d="M3 18H21"/>
 
-    <!-- Верх кеда + ровная пятка -->
-    <path d="M3 17v-3l4-2 2 2 2-1.5 4 2c1.6.9 3 .9 4 .6V17"/>
+    <!-- Вертикальный задник (ровный угол) -->
+    <path d="M4 18V13"/>
 
-    <!-- Панели -->
-    <path d="M6 17a5 5 0 0 1 7-3"/>
-    <path d="M12 17a3 3 0 0 1 3-2"/>
-
-    <!-- Шнурки -->
-    <path d="M12.6 13.8l3-1.2"/>
-    <path d="M13.3 13l2.8-1.2"/>
-    <path d="M14 12.2l2.6-1.1"/>
+    <!-- Контур верха от пятки к носку (поднятый профиль 'Air') -->
+    <path d="M4 13l4.8-2.5 1.9 2 2.2-1.2 4.6 2.4c1.6.8 2.5 1.1 3.5 1V18"/>
 
     <!-- Язычок -->
-    <path d="M13.2 11.5l-1.4 1.2 2 .3"/>
+    <path d="M10.6 10.8l-1.8 1.6 2.6.3"/>
+
+    <!-- Шнурки (3 шт по диагонали) -->
+    <path d="M12.6 10.6l4 1.5"/>
+    <path d="M11.8 11.4l4 1.5"/>
+    <path d="M11.0 12.2l4 1.5"/>
+
+    <!-- Панели (дуги) -->
+    <path d="M6 18a5.2 5.2 0 0 1 7.2-3.2"/>
+    <path d="M12.4 18a3.2 3.2 0 0 1 3.2-2.2"/>
 
     <!-- Деталь на союзке -->
-    <path d="M9.5 15.2h2.4"/>
+    <path d="M9.6 15.6h2.6"/>
   </g>
 </svg>
