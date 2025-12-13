@@ -3,25 +3,25 @@
         "id": "burgers",
         "icon": "icons/cat-tshirt.svg",
         "name": "T-SHIRTS",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
     },
     {
         "id": "pizza",
         "icon": "icons/cat-hoodie.svg",
         "name": "HOODIES",
-        "backgroundColor": "#FFF"
+        "backgroundColor": "#FFFFFF"
     },
     {
         "id": "pasta",
         "icon": "icons/cat-jeans.svg",
         "name": "JEANS",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
     },
     {
         "id": "ice-cream",
         "icon": "icons/cat-shoes.svg",
         "name": "SHOES",
-        "backgroundColor": "#000"
+        "backgroundColor": "#000000"
     },
     {
         "id": "coffee",
