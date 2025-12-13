@@ -1,11 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-  <!-- корпус с капюшоном -->
-  <path d="M12 4.3c2.9 0 5 2.3 5 5.1V20H7V9.4c0-2.8 2.1-5.1 5-5.1z"/>
-  <!-- рукава опущены как на рефе -->
-  <path d="M7 11.2 5.6 14V20M17 11.2 18.4 14V20"/>
-  <!-- шнурки -->
-  <path d="M10.4 10.3V13M13.6 10.3V13"/>
-  <!-- карман-«кенгуру» -->
-  <path d="M8.6 15.2h6.8v3H8.6z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M6 10V8a6 6 0 0 1 12 0v2"/>
+    <path d="M6 10c2 1.6 4 2.4 6 2.4S16 11.6 18 10"/>
+    <rect x="5" y="10" width="14" height="11" rx="2"/>
+    <path d="M9 16h6v2H9z"/>
+    <path d="M10 10v2M14 10v2"/>
+  </g>
 </svg>
