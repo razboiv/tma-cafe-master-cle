@@ -1,9 +1,9 @@
 [
     {
-        "id": "burgers",
+        "id": "jeans",
         "icon": "icons/cat-tshirt.svg",
         "name": "T-SHIRTS",
-        "backgroundColor": "#000000"
+        "backgroundColor": "#8FBC8F"
     },
     {
         "id": "pizza",
