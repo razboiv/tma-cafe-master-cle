@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
   <!-- пояс -->
   <path d="M7 4h10"/>
-  <!-- силуэт брюк -->
+  <!-- силуэт брюк: посадка + две штанины как на твоём скетче -->
   <path d="M9 4h6l1 6h-3l-1 10h-2L11 10H8l1-6z"/>
   <!-- центральная прострочка -->
   <path d="M12 4v3"/>
