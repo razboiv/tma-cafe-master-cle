@@ -1,7 +1,7 @@
 [
     {
         "id": "burgers",
-        "icon": "icons/cat-tshirt.svg",
+        "icon": "icons/icon-burger.svg",
         "name": "Burgers",
         "backgroundColor": "#F79683"
     },
