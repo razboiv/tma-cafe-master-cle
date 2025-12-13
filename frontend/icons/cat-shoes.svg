@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
   <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <path d="M4 12l4 3h6.5a5.5 5.5 0 0 0 3.5-1l2 1.5v2H6a4 4 0 0 1-4-4v-1z"/>
-    <path d="M9 13h2M11.5 12h2M14 11.5h2"/>
-    <path d="M4 14v-2"/>
+    <!-- sneaker upper, facing left -->
+    <path d="M20 12l-4 3H9.5A5.5 5.5 0 0 1 6 14l-2 1.5v2H18a4 4 0 0 0 4-4v-1z"/>
+    <!-- laces -->
+    <path d="M15 13h-2M12.5 12h-2M10 11.5H8"/>
+    <!-- heel -->
+    <path d="M20 14v-2"/>
   </g>
 </svg>
