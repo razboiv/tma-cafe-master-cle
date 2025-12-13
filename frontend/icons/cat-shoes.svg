@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <!-- контур верха -->
+     fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+  <!-- контур верха кроссовка, как на рефе -->
   <path d="M4 14c2 .5 5-1 7-3l3 3c2 0 3 .6 4 2"/>
-  <!-- декоративные полосы/шнуровка -->
-  <path d="M11 12l-2 2M13 12l-2 2"/>
+  <!-- дырки для шнурков / декоративные элементы -->
+  <path d="M14 12h2M12 12h1"/>
   <!-- подошва -->
   <path d="M3 17h18"/>
 </svg>
