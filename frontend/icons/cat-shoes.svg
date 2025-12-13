@@ -1,26 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <!-- Повернули влево через transform -->
-  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-     stroke-linejoin="round" vector-effect="non-scaling-stroke"
-     transform="scale(-1,1) translate(-24,0)">
+  <!-- Зеркалим вправо->влево -->
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+     vector-effect="non-scaling-stroke" transform="scale(-1,1) translate(-24,0)">
 
     <!-- Подошва -->
-    <path d="M4 20h16"/>
-    <path d="M4 18h16"/>
+    <path d="M3 19H21"/>
+    <path d="M3 17H21"/>
 
-    <!-- Ровная пятка + верх к носку -->
-    <path d="M4 18v-3l4-2 2 2 2-1.5 3 2c1.3.8 2.8 1.3 4 .9"/>
+    <!-- Верх кеда + ровная пятка -->
+    <path d="M3 17v-3l4-2 2 2 2-1.5 4 2c1.6.9 3 .9 4 .6V17"/>
 
     <!-- Панели -->
-    <path d="M7 18a5 5 0 0 1 6-3"/>
-    <path d="M11 18a3 3 0 0 1 3-2"/>
+    <path d="M6 17a5 5 0 0 1 7-3"/>
+    <path d="M12 17a3 3 0 0 1 3-2"/>
 
     <!-- Шнурки -->
-    <path d="M12.2 13.1l2.4-1.1"/>
-    <path d="M11.5 13.9l2.7-1.2"/>
-    <path d="M10.8 14.7l3-1.2"/>
+    <path d="M12.6 13.8l3-1.2"/>
+    <path d="M13.3 13l2.8-1.2"/>
+    <path d="M14 12.2l2.6-1.1"/>
+
+    <!-- Язычок -->
+    <path d="M13.2 11.5l-1.4 1.2 2 .3"/>
 
     <!-- Деталь на союзке -->
-    <path d="M9.5 16h2.2"/>
+    <path d="M9.5 15.2h2.4"/>
   </g>
 </svg>
