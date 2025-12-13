@@ -2,31 +2,31 @@
     {
         "id": "burgers",
         "icon": "icons/cat-tshirt.svg",
-        "name": "Burgers",
-        "backgroundColor": "#000000"
+        "name": "T-SHIRTS",
+        "backgroundColor": "#FFFFFF"
     },
     {
         "id": "pizza",
         "icon": "icons/cat-hoodie.svg",
-        "name": "Pizza",
-        "backgroundColor": "#000000"
+        "name": "HOODIE",
+        "backgroundColor": "#FFFFFF"
     },
     {
         "id": "pasta",
         "icon": "icons/cat-jeans.svg",
-        "name": "Pasta",
-        "backgroundColor": "#000000"
+        "name": "JEANS",
+        "backgroundColor": "#FFFFFF"
     },
     {
         "id": "ice-cream",
         "icon": "icons/cat-shoes.svg",
-        "name": "Ice Cream",
-        "backgroundColor": "#000000"
+        "name": "SHOES",
+        "backgroundColor": "#FFFFFF"
     },
     {
         "id": "coffee",
         "icon": "icons/cat-access.svg",
-        "name": "Coffee",
-        "backgroundColor": "#000000"
+        "name": "ACCESSORIES",
+        "backgroundColor": "#FFFFFF"
     }
 ]
