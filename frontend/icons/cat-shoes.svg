@@ -1,30 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- пятка: строгий прямой угол -->
-    <path d="M20 10V16.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Повернули влево через transform -->
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+     stroke-linejoin="round" vector-effect="non-scaling-stroke"
+     transform="scale(-1,1) translate(-24,0)">
 
-    <!-- верх кроссовка (влево, с плавным скатом к носку) -->
-    <path d="M4 14.2
-             C7.4 11.4 10.8 10.3 14.4 10.6
-             L18 12.6
-             L20 10"/>
+    <!-- Подошва -->
+    <path d="M4 20h16"/>
+    <path d="M4 18h16"/>
 
-    <!-- язычок -->
-    <path d="M13.6 10.4l-1.2 1.6"/>
+    <!-- Ровная пятка + верх к носку -->
+    <path d="M4 18v-3l4-2 2 2 2-1.5 3 2c1.3.8 2.8 1.3 4 .9"/>
 
-    <!-- шнуровка (диагональные штрихи) -->
-    <path d="M15.7 11.7l-1.8 1"/>
-    <path d="M14.5 11.2l-1.7 0.9"/>
-    <path d="M13.3 10.8l-1.6 0.8"/>
+    <!-- Панели -->
+    <path d="M7 18a5 5 0 0 1 6-3"/>
+    <path d="M11 18a3 3 0 0 1 3-2"/>
 
-    <!-- дуги панелей (как в рефе) -->
-    <path d="M6.2 13
-             A5 5 0 0 1 9.5 11.2"/>
-    <path d="M16.5 13
-             A4 4 0 0 1 19 11.6"/>
+    <!-- Шнурки -->
+    <path d="M12.2 13.1l2.4-1.1"/>
+    <path d="M11.5 13.9l2.7-1.2"/>
+    <path d="M10.8 14.7l3-1.2"/>
 
-    <!-- подошва: две линии -->
-    <path d="M3 15H21"/>
-    <path d="M3 16.5H19.5"/>
+    <!-- Деталь на союзке -->
+    <path d="M9.5 16h2.2"/>
   </g>
 </svg>
