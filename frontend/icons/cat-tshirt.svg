@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-  <!-- плечи/рукава/корпус — как на скетче -->
-  <path d="M6.5 7.2 8.6 5 12 6.6 15.4 5 17.5 7.2 16.2 10.6V20H7.8V10.6L6.5 7.2z"/>
-  <!-- горловина -->
-  <path d="M9.9 7.2c1.3.6 2.9.6 4.2 0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <path d="M8 6l4-2 4 2 3-1.2 2 3.2-3.2 2.1V19a2 2 0 0 1-2 2H8.2A2.2 2.2 0 0 1 6 18.8V10.1L2.8 8 4.8 4.8z"/>
+    <path d="M10 6.3c.9.9 3.1.9 4 0"/>
+  </g>
 </svg>
