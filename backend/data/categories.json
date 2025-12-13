@@ -1,31 +1,31 @@
 [
     {
-        "id": "burgers",
-        "icon": "icons/icon-burger.svg",
+        "id": "tshirts",
+        "icon": "icons/cat-tshirt.svg",
         "name": "Burgers",
         "backgroundColor": "#F79683"
     },
     {
-        "id": "pizza",
-        "icon": "icons/icon-pizza.svg",
+        "id": "hoodies",
+        "icon": "icons/cat-hoodie.svg",
         "name": "Pizza",
         "backgroundColor": "#F5DEB3"
     },
     {
-        "id": "pasta",
-        "icon": "icons/icon-pasta.svg",
+        "id": "jeans",
+        "icon": "icons/cat-jeans.svg",
         "name": "Pasta",
         "backgroundColor": "#8FBC8F"
     },
     {
-        "id": "ice-cream",
-        "icon": "icons/icon-icecream.svg",
+        "id": "shoes",
+        "icon": "icons/cat-shoes.svg",
         "name": "Ice Cream",
         "backgroundColor": "#E6E6FA"
     },
     {
-        "id": "coffee",
-        "icon": "icons/icon-coffee.svg",
+        "id": "access",
+        "icon": "icons/cat-access.svg",
         "name": "Coffee",
         "backgroundColor": "#D2B48C"
     }
