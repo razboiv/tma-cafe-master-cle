@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <!-- форма худи с капюшоном -->
-  <path d="M12 4c3 0 5 2.4 5 5v9H7V9c0-2.6 2-5 5-5z"/>
+     fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+  <!-- корпус с капюшоном и опущенными рукавами -->
+  <path d="M12 4c3 0 5 2.4 5 5v11H7V9c0-2.6 2-5 5-5z"/>
+  <!-- правый и левый рукав, как на рефе -->
+  <path d="M7 11l-1.5 2.5V20M17 11l1.5 2.5V20"/>
   <!-- шнурки -->
-  <path d="M10 10v2M14 10v2"/>
-  <!-- карман -->
-  <path d="M8.5 14.5h7v3h-7z"/>
+  <path d="M10.2 10.2v3M13.8 10.2v3"/>
+  <!-- карман-«кенгуру» -->
+  <path d="M8.5 15h7v3h-7z"/>
 </svg>
