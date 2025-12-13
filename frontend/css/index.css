@@ -560,3 +560,15 @@ p.small {
         background-position: 1200px 0;
     }
 }
+
+/* === Light theme (cards white, text & icons black) === */
+body { background:#fff; color:#000; }
+
+.category-card { color:#000; }          /* Заголовки и текст внутри карточки */
+.category-card .title { color:inherit; }
+
+/* Иконки как <img> — убрать возможную инверсию */
+.category-card img.icon { filter:none; }
+
+/* Иконки как inline SVG/React-компоненты */
+.category-card svg { color:#000; }      /* для SVG с stroke/fill="currentColor" */
