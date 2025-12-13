@@ -24,8 +24,8 @@
         "backgroundColor": "#000"
     },
     {
-        "id": "acess",
-        "icon": "icons/cat-acess.svg",
+        "id": "access",
+        "icon": "icons/cat-access.svg",
         "name": "ACCESSORIES",
         "backgroundColor": "#000"
     }
