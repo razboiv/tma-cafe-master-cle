@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-     fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-  <!-- плечи + рукава + корпус -->
-  <path d="M6 7l2-2 4 2 4-2 2 2-1.5 3.5V20H7.5V10.5L6 7z"/>
-  <!-- горловина (слегка V-образная как в рефе) -->
-  <path d="M10 7.2q2 .9 4 0"/>
+     fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- плечи/рукава/корпус — как на скетче -->
+  <path d="M6.5 7.2 8.6 5 12 6.6 15.4 5 17.5 7.2 16.2 10.6V20H7.8V10.6L6.5 7.2z"/>
+  <!-- горловина -->
+  <path d="M9.9 7.2c1.3.6 2.9.6 4.2 0"/>
 </svg>
