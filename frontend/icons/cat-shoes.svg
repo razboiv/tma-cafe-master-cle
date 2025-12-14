@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <!-- подошва -->
-    <path d="M3 18h18"/>
-    <!-- верх кроссовка (влево) -->
-    <path d="M4 18l3-4 4 3h7c1.1 0 2 .9 2 2"/>
-    <!-- шнурки (3 короткие полоски) -->
-    <path d="M9 14.2h1.2M10.3 14.8h1.2M11.6 15.4h1.2"/>
-    <!-- небольшой подъём мыска -->
-    <path d="M6 18c0-1.6 1.4-3 3-3"/>
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- пяточка и подошва (ровный зад, цельная линия) -->
+    <path d="M20 15.5V18H4.5"/>
+    <!-- верх кроссовка (вид влево) -->
+    <path d="M4.5 18l3.2-2.7c1.9-1.6 4.2-2.4 6.6-2.2 1.2.1 2.3.5 3.3 1.1l1.2.8H20"/>
+    <!-- шнурки: 3 короткие полоски -->
+    <path d="M10 14h1.2M11.3 14.6h1.2M12.6 15.2h1.2"/>
+    <!-- подъём мыска -->
+    <path d="M6.2 16.9c.6-1.1 1.9-1.8 3.2-2"/>
   </g>
 </svg>
