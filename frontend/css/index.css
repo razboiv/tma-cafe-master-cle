@@ -561,3 +561,15 @@ p.small {
         background-position: 1200px 0;
     }
 }
+
+/* Open: белый фон + чёрный текст */
+.cafe-status {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid rgba(0,0,0,.18);
+}
+
+.cafe-status svg {
+  stroke: #000 !important;
+  fill: none !important;
+}
