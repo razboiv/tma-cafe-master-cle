@@ -26,12 +26,5 @@
         "name": "SHOES",
         "backgroundColor": "rgba(31,31,31,0.95)",
         "color": "#FFFFFF"
-    },
-    {
-        "id": "coffee",
-        "icon": "icons/cat-access.svg",
-        "name": "ACCESSORIES",
-        "backgroundColor": "rgba(31,31,31,0.95)",
-        "color": "#FFFFFF"
     }
 ]
