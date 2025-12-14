@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <rect x="6" y="3" width="12" height="3" rx="1"/>
-    <path d="M12 6v12"/>
-    <path d="M6 6l1.5 14H9l1.5-6M18 6l-1.5 14H15l-1.5-6"/>
-    <path d="M7.5 7.5l2 1M16.5 7.5l-2 1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- пояс -->
+    <path d="M7 6h10"/>
+    <!-- внешний контур брюк -->
+    <path d="M7 6l-1 12h5l1-8 1 8h5l-1-12"/>
+    <!-- карманы (косые уголки) -->
+    <path d="M8.5 7.6l2-1.6"/>
+    <path d="M15.5 7.6l-2-1.6"/>
+    <!-- центральный шов -->
+    <path d="M11.5 10l-1 8"/>
+    <path d="M12.5 10l1 8"/>
   </g>
 </svg>
