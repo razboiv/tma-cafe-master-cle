@@ -1,7 +1,7 @@
 [
     {
         "id": "burger-1",
-        "image": "clothes/hoodie1",
+        "image": "clothes/hoodie1.jpg",
         "name": "REVERSIBLE FUR ZIP HOODIE in BLACK",
         "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
@@ -20,7 +20,7 @@
     },
     {
         "id": "burger-2",
-        "image": "clothes/hoodie2",
+        "image": "clothes/hoodie2.jpg",
         "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
         "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
@@ -38,7 +38,7 @@
     },
     {
         "id": "burger-3",
-        "image": "clothes/hoodie3",
+        "image": "clothes/hoodie3.jpg",
         "name": "PARIS HOODIE in BLACK",
         "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
         "variants": [
@@ -56,7 +56,7 @@
     },
     {
         "id": "burger-4",
-        "image": "clothes/hoodie4",
+        "image": "clothes/hoodie4.jpg",
         "name": "PARIS HOODIE in GREY",
         "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
         "variants": [
