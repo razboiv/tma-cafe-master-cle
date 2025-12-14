@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
   <g fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <!-- плечи, рукава вниз -->
-    <path d="M4.6 9.6l2.9 2.2 2-1.6h5l2 1.6 2.9-2.2"/>
+    <!-- плечи и линия верха -->
+    <path d="M4.5 9.6l2.9 2.1 2-1.5h5.2l2 1.5 2.9-2.1"/>
     <!-- корпус -->
-    <path d="M6.3 11.3v6.6c0 .8.7 1.5 1.5 1.5h8.4c.8 0 1.5-.7 1.5-1.5v-6.6"/>
-    <!-- маленькие штрихи-рукава (как на твоём примере) -->
-    <path d="M6 11.6l1.6 1.5M18 11.6l-1.6 1.5"/>
+    <path d="M6.3 11.2v6.6c0 .8.7 1.5 1.5 1.5h8.4c.8 0 1.5-.7 1.5-1.5v-6.6"/>
+    <!-- рукава вниз (штрихи) -->
+    <path d="M6.1 11.6l1.7 1.6M17.9 11.6l-1.7 1.6"/>
     <!-- горловина -->
     <path d="M10.3 10.1c.8.5 2.6.5 3.4 0"/>
   </g>
