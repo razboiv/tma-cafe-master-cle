@@ -1,68 +1,68 @@
 [
     {
         "id": "burger-1",
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Hamburger",
-        "description": "From aged beef, with homemade ketchup, romaine lettuce and tomato.",
+        "image": "images/clothes/hoodie2.jpg",
+        "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
+        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1199",
-                "weight": "200g"
+                "name": "L",
+                "cost": "2500",
+                "weight": ""
 
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1399",
-                "weight": "280g"
+                "name": "M",
+                "cost": "2500",
+                "weight": ""
             }
         ]
     },
     {
         "id": "pizza-1",
-        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Bianca Fresca",
-        "description": "White pizza with garlic infused olive oil, goat cheese, fresh mozzarella fior di latte, prosciutto fired off then topped with arugula and shaved parmesan.",
+        "image": "images/clothes/jeans1.jpg",
+        "name": "27 CLUB DISTRESSED DENIM in GREY",
+        "description": "—  100% cotton 12oz (~340gsm) premium denim — customized buttoms — stone wash dyeing — distressing — rivets on the front pockets and at the hem — Embroidery on the back pocket — Leather waistband patch — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1479",
-                "weight": "410g"
+                "name": "M",
+                "cost": "2500",
+                "weight": ""
             },
             {
                 "id": "m",
-                "name": "Medium",
-                "cost": "1699",
-                "weight": "600g"
+                "name": "L",
+                "cost": "2500",
+                "weight": ""
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1799",
-                "weight": "800g"
+                "name": "XL",
+                "cost": "2500",
+                "weight": ""
             }
         ]
     },
     {
         "id": "pasta-1",
-        "image": "https://images.unsplash.com/photo-1516685018646-549198525c1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Spaghetti alla Carbonara",
-        "description": "Spaghetti in a creamy sauce made with egg, prosciutto, sautéed onions, Parmesan cheese and black pepper.",
+        "image": "images/clothes/tshirt3.jpg",
+        "name": "EDEC T-SHIRT in BLACK",
+        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
         "variants": [
             {
                 "id": "n",
-                "name": "Normal",
-                "cost": "1109",
-                "weight": "300g"
+                "name": "M",
+                "cost": "2000",
+                "weight": ""
             },
             {
                 "id": "g",
-                "name": "Gluten Free",
-                "cost": "1290",
-                "weight": "300g"
+                "name": "L",
+                "cost": "2000",
+                "weight": ""
             }
         ]
     }
