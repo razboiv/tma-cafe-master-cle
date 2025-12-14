@@ -1,14 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <g fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <!-- капюшон (округлый, крупный) -->
-    <path d="M7.3 9.2C8.1 6 10.4 4.2 12 4.2s3.9 1.8 4.7 5"/>
-    <!-- плечи -->
-    <path d="M4.5 11l3-1.8 1.8 1.8h5.4l1.8-1.8 3 1.8"/>
-    <!-- корпус -->
-    <path d="M6.2 11.2v6.9c0 .85.7 1.5 1.6 1.5h8.4c.9 0 1.6-.65 1.6-1.5v-6.9"/>
-    <!-- рукава (как на твоём примере) -->
-    <path d="M5.8 12.2l1.8 1.7M18.2 12.2l-1.8 1.7"/>
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <!-- крупный округлый капюшон -->
+    <path d="M7.5 9c1.2-3 3.6-4.5 4.5-4.5S15.3 6 16.5 9"/>
+    <!-- корпус худи -->
+    <path d="M4 10l3-2 2 2h6l2-2 3 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8z"/>
     <!-- центральная складка -->
-    <path d="M12 11.3v6.6"/>
+    <path d="M12 10v10"/>
   </g>
 </svg>
