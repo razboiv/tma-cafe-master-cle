@@ -1,3 +1,10 @@
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M8 4l4 2 4-2 4 2-2 4v10H6V10L4 6z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <g fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <!-- плечи с рукавами вниз -->
+    <path d="M4.6 9.4l2.9 2.2 2-1.6h5l2 1.6 2.9-2.2"/>
+    <!-- корпус -->
+    <path d="M6.3 11.2v6.6c0 .8.7 1.5 1.5 1.5h8.4c.8 0 1.5-.7 1.5-1.5v-6.6"/>
+    <!-- горловина -->
+    <path d="M10.3 9.9c.8.55 2.6.55 3.4 0"/>
+  </g>
 </svg>
