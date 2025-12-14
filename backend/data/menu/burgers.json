@@ -1,82 +1,74 @@
 [
     {
         "id": "burger-1",
-        "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Hamburger",
-        "description": "From aged beef, with homemade ketchup, romaine lettuce and tomato.",
+        "image": "clothes/hoodie1",
+        "name": "REVERSIBLE FUR ZIP HOODIE in BLACK",
+        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1199",
-                "weight": "200g"
+                "name": "M",
+                "cost": "2500",
 
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1399",
-                "weight": "280g"
+                "name": "L",
+                "cost": "2500",
             }
         ]
     },
     {
         "id": "burger-2",
-        "image": "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Jalapeno & Habanero burger",
-        "description": "From aged beef, with slices of jalapeño and habanero peppers, Cheddar cheese, homemade guacamole, arugula, romaine lettuce, spicy tomato salsa and grilled corn.",
+        "image": "clothes/hoodie2",
+        "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
+        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1249",
-                "weight": "210g"
+                "name": "M",
+                "cost": "2500",
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1560",
-                "weight": "320g"
+                "name": "L",
+                "cost": "2500",
             }
         ]
     },
     {
         "id": "burger-3",
-        "image": "https://images.unsplash.com/photo-1610970878459-a0e464d7592b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Pulled pork smoked knee burger",
-        "description": "Pulled smoked pork knuckle braised with black beer and thyme, homemade BBQ sauce, spicy cabbage salad, romaine lettuce and Cheddar cheese.",
+        "image": "clothes/hoodie3",
+        "name": "PARIS HOODIE in BLACK",
+        "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1299",
-                "weight": "254g"
+                "name": "M",
+                "cost": "2500",
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1470",
-                "weight": "370g"
+                "name": "L",
+                "cost": "2500",
             }
         ]
     },
     {
         "id": "burger-4",
-        "image": "https://images.unsplash.com/photo-1586816001966-79b736744398?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=center&w=1920&q=80",
-        "name": "Chiken burger",
-        "description": "Grilled chicken breast with crispy bacon, Cheddar cheese, arugula, beetroot leaves, pickles and spicy homemade mayonnaise.",
+        "image": "clothes/hoodie4",
+        "name": "PARIS HOODIE in GREY",
+        "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "Small",
-                "cost": "1390",
-                "weight": "320g"
+                "name": "M",
+                "cost": "2500",
             },
             {
                 "id": "l",
-                "name": "Large",
-                "cost": "1580",
-                "weight": "500g"
+                "name": "L",
+                "cost": "2500",
             }
         ]
     }
