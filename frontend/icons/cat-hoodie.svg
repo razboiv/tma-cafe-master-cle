@@ -4,9 +4,9 @@
     <path vector-effect="non-scaling-stroke" d="M8 6c1.6-1.8 6.4-1.8 8 0"/>
     <!-- корпус + рукава (толстовка) -->
     <path vector-effect="non-scaling-stroke" d="M6.5 8.5L5 11v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6l-1.5-2.5-2 1.8H8.5z"/>
-    <!-- шнурки: обе стороны одинаковые, чуть длиннее -->
-    <path vector-effect="non-scaling-stroke" d="M11 10.2v2.6"/>
-    <path vector-effect="non-scaling-stroke" d="M13 10.2v2.6"/>
+    <!-- шнурки: левый длиннее -->
+    <path vector-effect="non-scaling-stroke" d="M11 10.2v2.8"/>
+    <path vector-effect="non-scaling-stroke" d="M13 10.2v1.6"/>
     <!-- манжеты -->
     <path vector-effect="non-scaling-stroke" d="M5 14.2v3.3"/>
     <path vector-effect="non-scaling-stroke" d="M19 14.2v3.3"/>
