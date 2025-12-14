@@ -269,13 +269,14 @@ p.small {
 .cafe-category-icon {
     width: 32px;
     height: 32px;
+    filter: brightness(0) saturate(100%) invert(1);
     opacity: 1;
 }
 
 .cafe-category-name {
     font-family: 'Rubik', sans-serif;
     font-size: 12px;
-    color: #212427;
+    color: #fff;
     opacity: .72;
 }
 
