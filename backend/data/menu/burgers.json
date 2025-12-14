@@ -1,74 +1,82 @@
 [
     {
         "id": "burger-1",
-        "image": "clothes/hoodie1.jpg",
-        "name": "REVERSIBLE FUR ZIP HOODIE in BLACK",
-        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
+        "image": "images/clothes/tshirt1.jpg",
+        "name": "PHOTO T-SHIRT in BLACK",
+        "description": "— 100% cotton, 220gsm — metallic hardware — silk screen printing + DTG printing — raw seams on sleeves and hem — woven tag inside — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
                 "name": "M",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
 
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             }
         ]
     },
     {
         "id": "burger-2",
-        "image": "clothes/hoodie2.jpg",
-        "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
-        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
+        "image": "images/clothes/tshirt2.jpg",
+        "name": "CHAINS TEE in WHITE",
+        "description": "— 100% cotton, 220gsm — metallic hardware — silk screen printing + DTG printing — distressing — raw seams on sleeves and hem — woven tag inside — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
                 "name": "M",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             }
         ]
     },
     {
         "id": "burger-3",
-        "image": "clothes/hoodie3.jpg",
-        "name": "PARIS HOODIE in BLACK",
-        "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
+        "image": "images/clothes/tshirt3.jpg",
+        "name": "EDEC T-SHIRT in BLACK",
+        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
         "variants": [
             {
                 "id": "s",
                 "name": "M",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             }
         ]
     },
     {
         "id": "burger-4",
-        "image": "clothes/hoodie4.jpg",
-        "name": "PARIS HOODIE in GREY",
-        "description": "— 600gsm 100% cotton french terry — Garment dyed — Decorative distressing — silk screen printing — Shipping starting December 10",
+        "image": "images/clothes/tshirt4.jpg",
+        "name": "EDEC T-SHIRT in WHITE",
+        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
         "variants": [
             {
                 "id": "s",
                 "name": "M",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2500",
+                "cost": "2000",
+                "weight": ""
             }
         ]
     }
