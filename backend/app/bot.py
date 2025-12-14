@@ -77,7 +77,7 @@ def handle_start_command(message):
     """
     send_actionable_message(
         chat_id=message.chat.id,
-        text='*Welcome to Laurel Cafe!* 🌿\n\nIt is time to order something delicious 😋 Tap the button below to get started.'
+        text='*Welcome to MAISON NOIR!* 🧟\n\nPress the "open" button to start.'
     )
 
 @bot.message_handler()
