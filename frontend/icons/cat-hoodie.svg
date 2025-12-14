@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <g fill="none" stroke="currentColor" stroke-width="1"
-     stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <!-- Капюшон (округлый) -->
-    <path d="M8.2 9.1C9 6.4 10.8 5 12 5s3 .9 3.8 4.1"/>
-    <!-- Плечи -->
-    <path d="M7.2 11h9.6"/>
-    <!-- Узкий корпус -->
-    <path d="M7.2 11v6.9c0 .8.6 1.4 1.4 1.4h6.8c.8 0 1.4-.6 1.4-1.4V11"/>
-    <!-- Рукава: выходят из плеч и доходят до низа корпуса -->
-    <path d="M7.2 11.1C5.8 12.6 5.4 15.2 6.6 18"/>
-    <path d="M16.8 11.1c1.4 1.5 1.8 4.1.6 6.9"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+    <!-- hood -->
+    <path d="M6 8a6 6 0 0 1 12 0"/>
+    <!-- hood opening hint -->
+    <path d="M11.5 6.2c.3.5 1.7.5 2 0"/>
+    <!-- shoulders -->
+    <path d="M4 10c1.8.9 3 .9 4 0M20 10c-1.8.9-3 .9-4 0"/>
+    <!-- body -->
+    <path d="M6 10v7.8a2.2 2.2 0 0 0 2.2 2.2H15.8A2.2 2.2 0 0 0 18 17.8V10"/>
+    <!-- sleeves -->
+    <path d="M6 10c-1 .8-2 1.7-2.5 3.2M18 10c1 .8 2 1.7 2.5 3.2"/>
+    <!-- hem -->
+    <path d="M6 19.5h12"/>
   </g>
 </svg>
