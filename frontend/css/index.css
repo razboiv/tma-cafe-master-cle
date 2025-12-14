@@ -270,7 +270,7 @@ p.small {
     width: 32px;
     height: 32px;
     filter: brightness(0) saturate(100%) invert(1);
-    opacity: 1;
+    opacity: 0.85;
 }
 
 .cafe-category-name {
