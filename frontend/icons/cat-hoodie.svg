@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <path d="M6 10V8a6 6 0 0 1 12 0v2"/>
-    <path d="M6 10c2 1.6 4 2.4 6 2.4S16 11.6 18 10"/>
-    <rect x="5" y="10" width="14" height="11" rx="2"/>
-    <path d="M9 16h6v2H9z"/>
-    <path d="M10 10v2M14 10v2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- капюшон -->
+    <path d="M7.5 8c1.6-3 4-4 4.5-4s2.9 1 4.5 4"/>
+    <!-- корпус худи -->
+    <path d="M4 10l3-2 2 2h6l2-2 3 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8z"/>
+    <!-- молния -->
+    <path d="M12 9v9"/>
+    <!-- карман-кенгуру -->
+    <path d="M9 16h6"/>
   </g>
 </svg>
