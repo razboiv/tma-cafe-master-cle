@@ -1,8 +1,8 @@
 [
     {
         "id": "burger-1",
-        "image": "images/clothes/hoodie2.jpg",
-        "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
+        "image": "images/clothes/hoodie1.jpg",
+        "name": "REVERSIBLE FUR ZIP",
         "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
             {
@@ -23,7 +23,7 @@
     {
         "id": "pizza-1",
         "image": "images/clothes/jeans1.jpg",
-        "name": "27 CLUB DISTRESSED DENIM in GREY",
+        "name": "27 CLUB DISTRESSED DENIM",
         "description": "—  100% cotton 12oz (~340gsm) premium denim — customized buttoms — stone wash dyeing — distressing — rivets on the front pockets and at the hem — Embroidery on the back pocket — Leather waistband patch — Shipping starting December 10",
         "variants": [
             {
