@@ -152,52 +152,11 @@ def categories():
 
 @app.get("/menu/<category_id>")
 def menu(category_id: str):
-    """
-    Товары категории: backend/data/menu/<category_id>.json
-    Нормализация:
-      - гарантируем id товара (если не задан),
-      - у каждого варианта есть name/id,
-      - cost -> строка с целыми рублями,
-      - добавляем weight (подпись размера), если отсутствует.
-    """
+    """Товары категории: backend/data/menu/<category_id>.json"""
     try:
-        items = json_data(f"data/menu/{category_id}.json")
-
-        # Нормализуем под фронт
-        normalized = []
-        for idx, item in enumerate(items, start=1):
-            it = dict(item)
-            it.setdefault("id", it.get("id") or f"{category_id}-{idx}")
-
-            variants = []
-            for v in it.get("variants", []):
-                vv = dict(v)
-                # имя/ид варианта
-                if not vv.get("name"):
-                    vv["name"] = vv.get("id", "")
-                vv.setdefault("id", (vv.get("id") or vv["name"] or "").lower())
-
-                # цена в рублях -> строка, без копеек
-                cost_raw = vv.get("cost", 0)
-                try:
-                    vv["cost"] = str(int(float(cost_raw)))
-                except Exception:
-                    vv["cost"] = "0"
-
-                # подпись (если на фронте её ждут)
-                vv.setdefault("weight", f"Size {vv.get('name','')}")
-
-                variants.append(vv)
-
-            it["variants"] = variants
-            normalized.append(it)
-
-        return jsonify(normalized)
+        return json_data(f"data/menu/{category_id}.json")
     except FileNotFoundError:
         return {"message": f"Could not find menu data for category: {category_id}."}, 404
-    except Exception as e:
-        # чтобы понять причину, вернём текст ошибки
-        return {"message": f"menu load error: {e}"}, 500
 
 
 @app.post("/invoice")
