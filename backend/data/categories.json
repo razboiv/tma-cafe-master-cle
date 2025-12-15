@@ -3,7 +3,7 @@
         "id": "burgers",
         "icon": "icons/cat-tshirt.svg",
         "name": "T-SHIRT",
-        "backgroundColor": "rgba(45,45,45,0.90)",
+        "backgroundColor": "rgba(15,15,15,0.90)",
         "color": "#FFFFFF"
     },
     {
@@ -17,14 +17,14 @@
         "id": "pasta",
         "icon": "icons/cat-jeans.svg",
         "name": "JEANS",
-        "backgroundColor": "rgba(45,45,45,0.90)",
+        "backgroundColor": "rgba(35,35,35,0.90)",
         "color": "#FFFFFF"
     },
     {
         "id": "ice-cream",
         "icon": "icons/cat-shoes.svg",
         "name": "SHOES",
-        "backgroundColor": "rgba(25,25,25,0.90)",
+        "backgroundColor": "rgba(45,45,45,0.90)",
         "color": "#FFFFFF"
     }
 ]
