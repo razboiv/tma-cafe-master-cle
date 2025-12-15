@@ -11,8 +11,22 @@ PAYMENT_PROVIDER_TOKEN=os.getenv('PAYMENT_PROVIDER_TOKEN')
 WEBHOOK_URL=os.getenv('WEBHOOK_URL')
 WEBHOOK_PATH='/bot'
 APP_URL=os.getenv('APP_URL')
+ORDER_CHANNEL_ID = int(os.getenv("ORDER_CHANNEL_ID", "0"))
+ADMIN_CHAT_IDS = [int(x) for x in os.getenv("ADMIN_CHAT_IDS", "").split(",") if x]
 
 bot = TeleBot(BOT_TOKEN, parse_mode=None)
+
+def notify_admins(text: str):
+    if ORDER_CHANNEL_ID:
+        try:
+            bot.send_message(ORDER_CHANNEL_ID, text, parse_mode="Markdown")
+        except Exception as e:
+            print("notify_admins(channel) error:", e)
+    for uid in ADMIN_CHAT_IDS:
+        try:
+            bot.send_message(uid, text, parse_mode="Markdown")
+        except Exception as e:
+            print("notify_admins(user) error:", e)
 
 @bot.message_handler(content_types=['successful_payment'])
 def handle_successful_payment(message):
@@ -57,6 +71,22 @@ def handle_successful_payment(message):
         text=text,
         parse_mode='markdown'
     )
+
+@bot.message_handler(content_types=['successful_payment'])
+def on_successful_payment(message):
+    sp = message.successful_payment
+    total_rub = sp.total_amount // 100  # копейки -> ₽
+    who = f"@{message.from_user.username}" if message.from_user.username else f"id:{message.from_user.id}"
+
+    admin_text = (
+        "✅ *Новый оплаченный заказ*\n"
+        f"Сумма: *{total_rub} ₽*\n"
+        f"Покупатель: {who}\n"
+        f"Charge ID: `{sp.provider_payment_charge_id}`"
+    )
+    notify_admins(admin_text)
+
+    # твой ответ покупателю — оставь как было
 
 @bot.pre_checkout_query_handler(func=lambda _: True)
 def handle_pre_checkout_query(pre_checkout_query):
