@@ -166,9 +166,9 @@ def handle_successful_payment(message: Message):
     # ---- Пользователю: только спасибо + состав + финальная фраза
     customer_name = (saved_order or {}).get('form', {}).get('name') or tg_name or (message.from_user.first_name or 'покупатель')
     user_text = (
-        f'Спасибо за ваш заказ, *{customer_name}*.\n\n'
+        f'Спасибо за ваш заказ, *{customer_name}*. 🧟\n\n'
         f'{order_text_block}\n\n'
-        'Мы свяжемся с вами в ближайшее время.'
+        'Мы свяжемся с вами в ближайшее время. 👁️👁️'
     )
     bot.send_message(chat_id=message.chat.id, text=user_text)
 
