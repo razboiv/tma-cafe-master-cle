@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import uuid
 from typing import List, Dict, Any, Tuple
 
@@ -31,7 +32,7 @@ MENU_DIR = os.path.join(DATA_DIR, "menu")
 DETAILS_DIR = os.path.join(DATA_DIR, "details")
 
 app = Flask(__name__)
-# Разрешаем CORS (фронт на Vercel). Если нужен более строгий — укажи origin.
+# Разрешаем CORS (фронт на Vercel)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -105,29 +106,58 @@ def _find_item_in_menus(item_id: str) -> Dict[str, Any] | None:
 
 def _read_body() -> dict:
     """
-    Читаем тело запроса из JSON или form-urlencoded.
-    Если jQuery шлёт form, то items приходит строкой — распарсим.
+    Читаем тело запроса: JSON, raw JSON или form-urlencoded (в т.ч. jQuery keys: items[0][...]).
+    Возвращаем dict вида: { "items": [...], "comment": "..." }
     """
+    # 1) Обычный JSON
     data = request.get_json(silent=True)
     if isinstance(data, dict) and data:
         return data
 
-    # form / x-www-form-urlencoded
-    form = request.form.to_dict(flat=True)
-    if not form:
-        return {}
-
-    # если items — строка JSON
-    if "items" in form and isinstance(form["items"], str):
+    # 2) Raw JSON (например, text/plain)
+    if request.data:
         try:
-            form["items"] = json.loads(form["items"])
+            raw = request.data.decode("utf-8")
+            parsed = json.loads(raw)
+            if isinstance(parsed, dict):
+                return parsed
         except Exception:
-            # пробуем как список через запятую (на всякий)
-            form["items"] = []
-    # comment может быть строкой
-    if "comment" in form and form["comment"] is None:
-        form["comment"] = ""
-    return form
+            pass
+
+    # 3) form-urlencoded / multipart
+    if request.form:
+        # плоская форма
+        flat: Dict[str, Any] = {k: request.form.get(k) for k in request.form.keys()}
+
+        # вариант: items — строка JSON
+        if "items" in flat and isinstance(flat["items"], str):
+            try:
+                flat["items"] = json.loads(flat["items"])
+                return {"items": flat["items"], "comment": flat.get("comment", "")}
+            except Exception:
+                pass
+
+        # вариант: jQuery-брекеты items[0][name], items[0][variant][name]...
+        items_map: Dict[int, Dict[str, Any]] = {}
+        for k, v in flat.items():
+            m = re.match(r"^items\[(\d+)\]\[(\w+)\](?:\[(\w+)\])?$", k)
+            if not m:
+                continue
+            idx = int(m.group(1))
+            key1 = m.group(2)
+            key2 = m.group(3)
+            item = items_map.setdefault(idx, {})
+            if key2:
+                sub = item.setdefault(key1, {})
+                sub[key2] = v
+            else:
+                item[key1] = v
+
+        if items_map:
+            items_list = [items_map[i] for i in sorted(items_map.keys())]
+            return {"items": items_list, "comment": flat.get("comment", "")}
+
+    return {}
 
 def _handle_invoice_request(data: dict):
     items = data.get("items") or []
@@ -208,11 +238,10 @@ def create_invoice():
     except Exception as e:
         return {"ok": False, "message": f"Failed to create invoice: {e}"}, 500
 
-# Алиас под фронт, который шлёт /order (и CORS preflight OPTIONS)
+# Алиас под фронт (/order) + CORS preflight
 @app.route("/order", methods=["POST", "OPTIONS"])
 def create_order():
     if request.method == "OPTIONS":
-        # CORS preflight OK
         return ("", 204)
     # if not auth.is_request_authorized(request):
     #     return {"message": "Unauthorized"}, 401
