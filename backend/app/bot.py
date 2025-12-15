@@ -128,7 +128,7 @@ def create_invoice_link(prices) -> str:
     """
     return bot.create_invoice_link(
         title='Order #1',
-        description='Great choice! Last steps and we will get to cooking ;)',
+        description='Отличный выбор! Остались последние шаги ;)',
         payload='orderID',
         provider_token=PAYMENT_PROVIDER_TOKEN,
         currency='RUB',
