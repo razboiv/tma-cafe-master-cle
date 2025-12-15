@@ -1,23 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
-    <!-- задник (слегка выше) -->
-    <path d="M20 12V18"/>
+  <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- задник повыше -->
+    <path vector-effect="non-scaling-stroke" d="M20 13V18"/>
     <!-- платформа-подошва -->
-    <path d="M4 18h16v2H4z"/>
-
-    <!-- верх кроссовка (выше силуэт, мягкая линия к заднику) -->
-    <path d="M4.5 18
-             L7.8 13.6
-             Q10.8 12.3 14 12.7
-             Q16.6 13.0 18.6 14.2
-             H20"/>
-
-    <!-- шнурки: слегка выше -->
-    <path d="M9.8 13.2h1.2"/>
-    <path d="M11.1 13.8h1.2"/>
-    <path d="M12.4 14.4h1.2"/>
-
-    <!-- подъём мыска -->
-    <path d="M6 16.3c.6-1.1 2-1.9 3.4-2.1"/>
+    <path vector-effect="non-scaling-stroke" d="M4 18h16v2H4z"/>
+    <!-- верх кроссовка (вид влево) -->
+    <path vector-effect="non-scaling-stroke" d="M4.5 18l3.2-2.7c1.9-1.6 4.2-2.4 6.6-2.2 1.2.1 2.3.5 3.3 1.1l1.2.8H20"/>
+    <!-- шнурки: 3 короткие полоски -->
+    <path vector-effect="non-scaling-stroke" d="M10 12h1.2"/>
+    <path vector-effect="non-scaling-stroke" d="M11.3 12.6h1.2"/>
+    <path vector-effect="non-scaling-stroke" d="M12.6 13.2h1.2"/>
+    <!-- лёгкий подъём мыска -->
+    <path vector-effect="non-scaling-stroke" d="M6.2 16.9c.6-1.1 1.9-1.8 3.2-2"/>
   </g>
 </svg>
