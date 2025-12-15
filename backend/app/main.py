@@ -31,7 +31,8 @@ MENU_DIR = os.path.join(DATA_DIR, "menu")
 DETAILS_DIR = os.path.join(DATA_DIR, "details")
 
 app = Flask(__name__)
-CORS(app)
+# Разрешаем CORS для всего (фронт на Vercel)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 def _abs_path(rel_path: str) -> str:
@@ -86,7 +87,6 @@ def _prepare_order_and_prices(items: list, comment: str | None = None) -> Tuple[
     return saved_items, prices, total_rub
 
 def _find_item_in_menus(item_id: str) -> Dict[str, Any] | None:
-    """Перебираем все файлы data/menu/*.json и ищем товар по id."""
     if not os.path.isdir(MENU_DIR):
         return None
     for fname in os.listdir(MENU_DIR):
@@ -102,6 +102,20 @@ def _find_item_in_menus(item_id: str) -> Dict[str, Any] | None:
             if str(it.get("id")) == str(item_id):
                 return it
     return None
+
+def _handle_invoice_request(data: dict):
+    items = data.get("items") or []
+    comment = data.get("comment") or ""
+    saved_items, prices, total_rub = _prepare_order_and_prices(items, comment)
+    order_id = f"ord_{uuid.uuid4().hex[:12]}"
+    save_order(order_id, {"items": saved_items, "comment": comment, "total": total_rub})
+    pay_url = create_invoice_link(
+        prices,
+        payload=order_id,
+        title=f"Order {order_id}",
+        description="Оплата заказа"
+    )
+    return {"ok": True, "pay_url": pay_url, "payload": order_id}
 
 # ── routes ───────────────────────────────────────────────────────────────────
 @app.get("/health")
@@ -124,7 +138,6 @@ def categories():
 
 @app.get("/menu/<category_id>")
 def menu(category_id: str):
-    """backend/data/menu/<category_id>.json + нормализация вариантов."""
     try:
         items = json_data(f"data/menu/{category_id}.json")
         normalized = [_normalize_item(item, category_id, i) for i, item in enumerate(items, start=1)]
@@ -136,58 +149,44 @@ def menu(category_id: str):
 
 @app.get("/menu/details/<item_id>")
 def menu_details(item_id: str):
-    """
-    Возвращает один товар по id.
-    1) /data/details/<id>.json (если такие файлы есть);
-    2) поиск по всем файлам /data/menu/*.json (по полю "id").
-    """
     try:
-        # 1) details/<id>.json — если используется такая структура
         if os.path.isdir(DETAILS_DIR):
             p = os.path.join(DETAILS_DIR, f"{item_id}.json")
             if os.path.exists(p):
                 with open(p, "r", encoding="utf-8") as f:
                     return jsonify(json.load(f))
-
-        # 2) полным перебором по меню
         found = _find_item_in_menus(item_id)
         if found:
             return jsonify(found)
-
         return {"message": f"Item not found: {item_id}"}, 404
     except Exception as e:
         return {"message": f"details error: {e}"}, 500
 
 @app.post("/invoice")
 def create_invoice():
-    """
-    Создаёт инвойс-ссылку в рублях.
-    Вход: { "items":[{ name, variant:{name,cost}, quantity }...], "comment": "..." }
-    Выход: { ok, pay_url, payload }
-    """
     # if not auth.is_request_authorized(request):
     #     return {"message": "Unauthorized"}, 401
-
     data = request.get_json(silent=True) or {}
-    items = data.get("items") or []
-    comment = data.get("comment") or ""
-
-    saved_items, prices, total_rub = _prepare_order_and_prices(items, comment)
-
-    order_id = f"ord_{uuid.uuid4().hex[:12]}"
-    save_order(order_id, {"items": saved_items, "comment": comment, "total": total_rub})
-
     try:
-        pay_url = create_invoice_link(
-            prices,
-            payload=order_id,
-            title=f"Order {order_id}",
-            description="Оплата заказа"
-        )
+        res = _handle_invoice_request(data)
+        return jsonify(res)
     except Exception as e:
         return {"ok": False, "message": f"Failed to create invoice: {e}"}, 500
 
-    return jsonify({"ok": True, "pay_url": pay_url, "payload": order_id})
+# ⚠️ Алиас под фронт, который шлёт /order (и CORS preflight OPTIONS)
+@app.route("/order", methods=["POST", "OPTIONS"])
+def create_order():
+    if request.method == "OPTIONS":
+        # даём ОК на префлайт
+        return ("", 204)
+    # if not auth.is_request_authorized(request):
+    #     return {"message": "Unauthorized"}, 401
+    data = request.get_json(silent=True) or {}
+    try:
+        res = _handle_invoice_request(data)
+        return jsonify(res)
+    except Exception as e:
+        return {"ok": False, "message": f"Failed to create order: {e}"}, 500
 
 # ── совместимость и webhook ──────────────────────────────────────────────────
 def read_json_data(path: str):
