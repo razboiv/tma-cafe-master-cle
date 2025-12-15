@@ -1,218 +1,180 @@
 import json
 import os
-import uuid
+from . import auth, bot
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
 from telebot.types import LabeledPrice
 
-# внутренние модули
-from . import auth, bot  # bot используется для refresh_webhook() внизу
-
-# create_invoice_link() — создаёт ссылку на оплату в RUB c payload
-try:
-    from .bot import create_invoice_link
-except Exception:
-    # на случай особенностей импорта
-    from app.bot import create_invoice_link  # type: ignore
-
-# простое in-memory хранилище заказа до оплаты
-try:
-    from .orders_store import put as save_order
-except Exception:
-    from app.orders_store import put as save_order  # type: ignore
-
-# ──────────────────────────────────────────────────────────────────────────────
-# ENV / CONFIG
-# ──────────────────────────────────────────────────────────────────────────────
-
-# Загружаем локальные переменные окружения (в проде обычно не нужно)
+# Load environment variables from .env files.
+# Typicall environment variables are set on the OS level,
+# but for development purposes it may be handy to set them
+# in the .env file directly.
 load_dotenv()
 
-# Рубли -> копейки (целые минимальные единицы для Telegram)
+# рубли -> копейки (целые в минимальных единицах)
 PRICE_MULTIPLIER = int(os.getenv("PRICE_MULTIPLIER", "100"))
 
-# Базовая директория backend (где лежит папка data/)
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-
-# ──────────────────────────────────────────────────────────────────────────────
-# APP
-# ──────────────────────────────────────────────────────────────────────────────
-
 app = Flask(__name__)
-CORS(app)
+# Handle paths like '/info/' and '/info' as the same.
+app.url_map.strict_slashes = False
+
+# List of allowed origins. The production 'APP_URL' is added by default,
+# the development `DEV_APP_URL` is added if it and `DEV_MODE` variable is present.
+allowed_origins = [os.getenv('APP_URL')]
+
+if os.getenv('DEV_MODE') is not None:
+    allowed_origins.append(os.getenv('DEV_APP_URL'))
+    bot.enable_debug_logging()
+        
+CORS(app, origins=list(filter(lambda o: o is not None, allowed_origins)))
 
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Helpers
-# ──────────────────────────────────────────────────────────────────────────────
 
-def _abs_path(rel_path: str) -> str:
+@app.route(bot.WEBHOOK_PATH, methods=['POST'])
+def bot_webhook():
+    """Entry points for Bot update sent via Telegram API.
+      You may find more info looking into process_update method.
     """
-    Возвращает абсолютный путь к файлу данных.
-    Поддерживает как 'categories.json', так и 'data/menu/hoodie.json'.
-    """
-    rel_path = rel_path.lstrip("/")
-
-    # если уже начинается с 'data/', добавим от BASE_DIR
-    if rel_path.startswith("data/"):
-        return os.path.join(BASE_DIR, rel_path)
-
-    # иначе считаем, что относительно DATA_DIR
-    return os.path.join(DATA_DIR, rel_path)
-
-
-def json_data(rel_path: str):
-    """
-    Загружает JSON из файла по относительному пути (от папки data/).
-    Примеры:
-      json_data('data/categories.json')
-      json_data('menu/hoodie.json')
-    """
-    data_file_path = _abs_path(rel_path)
-    if not os.path.exists(data_file_path):
-        raise FileNotFoundError(data_file_path)
-    with open(data_file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _prepare_order_and_prices(items: list, comment: str | None = None):
-    """
-    items — массив из фронта вида:
-      {
-        "name": "REVERSIBLE FUR ZIP HOODIE in BLACK",
-        "variant": {"id":"m","name":"M","cost":"2500"},
-        "quantity": 2
-      }
-    Возвращает:
-      saved_items — для orders_store (для уведомлений),
-      prices — список LabeledPrice для Telegram (в копейках),
-      total_rub — сумма в рублях (целое).
-    """
-    saved_items = []
-    prices: list[LabeledPrice] = []
-    total_rub = 0
-
-    for itm in items or []:
-        name = itm.get("name") or "Item"
-        variant = (itm.get("variant") or {})
-        var_name = variant.get("name")
-        rub = int(variant.get("cost", 0))
-        qty = int(itm.get("quantity", 1))
-
-        line_total_rub = rub * qty
-        total_rub += line_total_rub
-
-        # Сохраняем для последующего уведомления
-        saved_items.append({
-            "name": name,
-            "variant": var_name,
-            "qty": qty,
-            "price": rub,
-        })
-
-        # Готовим позиции для инвойса (в копейках!)
-        label = f"{name}"
-        if var_name:
-            label += f" — {var_name}"
-        if qty > 1:
-            label += f" ×{qty}"
-        prices.append(LabeledPrice(label=label, amount=line_total_rub * PRICE_MULTIPLIER))
-
-    return saved_items, prices, total_rub
-
-
-# ──────────────────────────────────────────────────────────────────────────────
-# Routes
-# ──────────────────────────────────────────────────────────────────────────────
-
-@app.get("/health")
-def health():
-    return {"ok": True}
-
-
-@app.get("/info")
+    bot.process_update(request.get_json())
+    return { 'message': 'OK' }
+        
+@app.route('/info')
 def info():
-    """Отдаёт общий инфо-блок: backend/data/info.json"""
+    """API endpoint for providing info about the cafe.
+    
+    Returns:
+      JSON data from data/info.json file or error message with 404 code if not found.
+    """
     try:
-        return json_data("data/info.json")
+        return json_data('data/info.json')
     except FileNotFoundError:
-        return {"message": "Could not find info data."}, 404
+        return { 'message': 'Could not find info data.' }, 404
 
-
-@app.get("/categories")
+@app.route('/categories')
 def categories():
-    """Отдаёт список категорий: backend/data/categories.json"""
-    try:
-        return json_data("data/categories.json")
-    except FileNotFoundError:
-        return {"message": "Could not find categories data."}, 404
-
-
-@app.get("/menu/<category_id>")
-def menu(category_id: str):
-    """Товары категории: backend/data/menu/<category_id>.json"""
-    try:
-        return json_data(f"data/menu/{category_id}.json")
-    except FileNotFoundError:
-        return {"message": f"Could not find menu data for category: {category_id}."}, 404
-
-
-@app.post("/invoice")
-def create_invoice():
+    """API endpoint for providing available cafe categories.
+    
+    Returns:
+      JSON data from data/categories.json file or error message with 404 code if not found.
     """
-    Создаёт инвойс/ссылку на оплату в рублях.
-    Ожидает JSON:
-      {
-        "items": [ { "name": "...", "variant": {"name":"M","cost":"2500"}, "quantity": 2 }, ... ],
-        "comment": "опционально"
-      }
-    Возвращает:
-      { "ok": true, "pay_url": "<telegram invoice url>", "payload": "<order_id>" }
-    """
-    # (если нужна авторизация — раскомментируй и реализуй в auth)
-    # if not auth.is_request_authorized(request):
-    #     return {"message": "Unauthorized"}, 401
-
-    data = request.get_json(silent=True) or {}
-    items = data.get("items") or []
-    comment = data.get("comment") or ""
-
-    saved_items, prices, total_rub = _prepare_order_and_prices(items, comment)
-
-    # order_id для payload
-    order_id = f"ord_{uuid.uuid4().hex[:12]}"
-    save_order(order_id, {
-        "items": saved_items,
-        "comment": comment,
-        "total": total_rub
-    })
-
-    # создаём ссылку на оплату с payload=order_id
     try:
-        pay_url = create_invoice_link(
-            prices,
-            payload=order_id,
-            title=f"Order {order_id}",
-            description="Оплата заказа"
+        return json_data('data/categories.json')
+    except FileNotFoundError:
+        return { 'message': 'Could not find categories data.' }, 404
+
+@app.route('/menu/<category_id>')
+def category_menu(category_id: str):
+    """API endpoint for providing menu list of specified category.
+    
+    Args:
+      category_id: Looking menu category ID.
+
+    Returns:
+      JSON data from one of data/menu/<category_id>.json file or error message with 404 code if not found.
+    """
+    try:
+        return json_data(f'data/menu/{category_id}.json')
+    except FileNotFoundError:
+        return { 'message': f'Could not find `{category_id}` category data.' }, 404
+
+@app.route('/menu/details/<menu_item_id>')
+def menu_item_details(menu_item_id: str):
+    """API endpoint for providing menu item details.
+    
+    Args:
+      menu_item_id: Looking menu item ID.
+
+    Returns:
+      JSON data from one of data/menu/<category_id>.json file or error message with 404 code if not found.
+    """
+    try:
+        data_folder_path = 'data/menu'
+        for data_file in os.listdir(data_folder_path):
+            menu_items = json_data(f'{data_folder_path}/{data_file}')
+            desired_menu_item = next((menu_item for menu_item in menu_items if menu_item['id'] == menu_item_id), None)
+            if desired_menu_item is not None:
+                return desired_menu_item
+        return { 'message': f'Could not menu item data with `{menu_item_id}` ID.' }, 404
+    except FileNotFoundError:
+        return { 'message': f'Could not menu item data with `{menu_item_id}` ID.' }, 404
+
+@app.route('/order', methods=['POST'])
+def create_order():
+    """API endpoint for creating an order. This method performs the following tasks:
+        - Validation of the initData received from the Telegram Mini App.
+        - Conversion of cart items into LabeledPrice objects for further submitting to Telegram API.
+      As a result, we get an invoiceUrl that can be used to start the payment process in our Mini App.
+      See: https://core.telegram.org/bots/webapps#initializing-mini-apps (Telegram.WebApp.openInvoice method).
+    
+      Example of request body:
+        {
+            "_auth": "<init_data_for_validation>",
+            "cartItems": [
+                {
+                    "cafeItem": {
+                        "name": "Burger"
+                    },
+                    "variant": {
+                        "name": "Small",
+                        "cost": 100
+                    },
+                    "quantity": 3
+                }
+            ]
+        }
+
+      Please note: This method is the appropriate place to create an order ID and save it to some persistance storage.
+      You can pass it then as invoice_payload parameter when creating invoiceUrl to further update the order status, and,
+      after successful payment, get the collected information about the order items (this information is not stored by Telegram).
+    """
+    request_data = request.get_json()
+
+    auth_data = request_data.get('_auth')
+    if auth_data is None or not auth.validate_auth_data(bot.BOT_TOKEN, auth_data):
+        return { 'message': 'Request data should contain auth data.' }, 401
+
+    order_items = request_data.get('cartItems')
+    if order_items is None:
+        return { 'message': 'Cart Items are not provided.' }, 400
+
+    labeled_prices = []
+    for order_item in order_items:
+        name = order_item['cafeItem']['name']
+        variant = order_item['variant']['name']
+        cost = order_item['variant']['cost']
+        quantity = order_item['quantity']
+        price = int(cost) * PRICE_MULTIPLIER * int(quantity)  # => копейки, целое число
+        labeled_price = LabeledPrice(
+            label=f'{name} ({variant}) x{quantity}',
+            amount=price
         )
-    except Exception as e:
-        return {"ok": False, "message": f"Failed to create invoice: {e}"}, 500
+        labeled_prices.append(labeled_price)
 
-    return jsonify({"ok": True, "pay_url": pay_url, "payload": order_id})
+    invoice_url = bot.create_invoice_link(
+        prices=labeled_prices
+    )
 
+    return { 'invoiceUrl': invoice_url }
 
-# ──────────────────────────────────────────────────────────────────────────────
-# Utils
-# ──────────────────────────────────────────────────────────────────────────────
+def json_data(data_file_path: str):
+    """Extracts data from the JSON file.
 
-def read_json_data(data_file_path: str):
+    Args:
+      data_file_path: Path to desired JSON file.
+
+    Returns:
+      Data from the desired JSON file (as dict).
+
+    Raises:
+      FileNotFoundError if desired file doesn't exist.
     """
-    Оставил для совместимости — если где-то вызывается старая функция.
-    """
-    return json_data(data_file_path)
+    if os.path.exists(data_file_path):
+        with open(data_file_path, 'r') as data_file:
+            return json.load(data_file)
+    else:
+        raise FileNotFoundError()
+    
 
 
-# при старте перерегистрируем вебхук (если используется)
 bot.refresh_webhook()
