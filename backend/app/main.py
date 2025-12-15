@@ -5,6 +5,10 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from flask_cors import CORS
 from telebot.types import LabeledPrice
+import uuid, time, pathlib
+from typing import Any, Dict
+
+ORDERS_FILE = 'data/orders.json'
 
 # Load environment variables from .env files.
 # Typicall environment variables are set on the OS level,
@@ -29,7 +33,32 @@ if os.getenv('DEV_MODE') is not None:
         
 CORS(app, origins=list(filter(lambda o: o is not None, allowed_origins)))
 
+def _ensure_orders_file():
+    # Create data dir or file if missing
+    data_dir = os.path.dirname(ORDERS_FILE)
+    if data_dir and not os.path.exists(data_dir):
+        os.makedirs(data_dir, exist_ok=True)
+    if not os.path.exists(ORDERS_FILE):
+        with open(ORDERS_FILE, 'w') as f:
+            json.dump({}, f)
 
+def _load_orders() -> Dict[str, Any]:
+    _ensure_orders_file()
+    try:
+        with open(ORDERS_FILE, 'r') as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def _save_orders(orders: Dict[str, Any]) -> None:
+    _ensure_orders_file()
+    with open(ORDERS_FILE, 'w') as f:
+        json.dump(orders, f, ensure_ascii=False, indent=2)
+
+def _save_order(order_id: str, payload: Dict[str, Any]) -> None:
+    orders = _load_orders()
+    orders[order_id] = payload
+    _save_orders(orders)
 
 @app.route(bot.WEBHOOK_PATH, methods=['POST'])
 def bot_webhook():
@@ -49,19 +78,19 @@ def info():
     try:
         return json_data('data/info.json')
     except FileNotFoundError:
-        return { 'message': 'Could not find info data.' }, 404
+        return { 'message': 'Could not find cafe information.' }, 404
 
 @app.route('/categories')
 def categories():
-    """API endpoint for providing available cafe categories.
-    
+    """API endpoint for providing a list of menu categories.
+
     Returns:
       JSON data from data/categories.json file or error message with 404 code if not found.
     """
     try:
         return json_data('data/categories.json')
     except FileNotFoundError:
-        return { 'message': 'Could not find categories data.' }, 404
+        return { 'message': 'Could not find categories list.' }, 404
 
 @app.route('/menu/<category_id>')
 def category_menu(category_id: str):
@@ -80,82 +109,87 @@ def category_menu(category_id: str):
 
 @app.route('/menu/details/<menu_item_id>')
 def menu_item_details(menu_item_id: str):
-    """API endpoint for providing menu item details.
+    """API endpoint for providing info of the specified menu item.
     
     Args:
-      menu_item_id: Looking menu item ID.
+      menu_item_id: Desired menu item ID.
 
     Returns:
-      JSON data from one of data/menu/<category_id>.json file or error message with 404 code if not found.
+      JSON data from one of data/menu/*.json files or error message with 404 code if not found.
     """
     try:
-        data_folder_path = 'data/menu'
-        for data_file in os.listdir(data_folder_path):
-            menu_items = json_data(f'{data_folder_path}/{data_file}')
-            desired_menu_item = next((menu_item for menu_item in menu_items if menu_item['id'] == menu_item_id), None)
-            if desired_menu_item is not None:
-                return desired_menu_item
-        return { 'message': f'Could not menu item data with `{menu_item_id}` ID.' }, 404
+        for category_id in [ 'popular', 'burgers', 'pizza', 'pasta', 'coffee', 'ice-cream' ]:
+            menu_items = json_data(f'data/menu/{category_id}.json')
+            for menu_item in menu_items:
+                if menu_item['id'] == menu_item_id:
+                    return menu_item
+        raise FileNotFoundError()
     except FileNotFoundError:
-        return { 'message': f'Could not menu item data with `{menu_item_id}` ID.' }, 404
+        return { 'message': f'Could not find `{menu_item_id}` menu item.' }, 404
 
 @app.route('/order', methods=['POST'])
 def create_order():
-    """API endpoint for creating an order. This method performs the following tasks:
-        - Validation of the initData received from the Telegram Mini App.
-        - Conversion of cart items into LabeledPrice objects for further submitting to Telegram API.
-      As a result, we get an invoiceUrl that can be used to start the payment process in our Mini App.
-      See: https://core.telegram.org/bots/webapps#initializing-mini-apps (Telegram.WebApp.openInvoice method).
-    
-      Example of request body:
-        {
-            "_auth": "<init_data_for_validation>",
-            "cartItems": [
-                {
-                    "cafeItem": {
-                        "name": "Burger"
-                    },
-                    "variant": {
-                        "name": "Small",
-                        "cost": 100
-                    },
-                    "quantity": 3
-                }
-            ]
-        }
-
-      Please note: This method is the appropriate place to create an order ID and save it to some persistance storage.
-      You can pass it then as invoice_payload parameter when creating invoiceUrl to further update the order status, and,
-      after successful payment, get the collected information about the order items (this information is not stored by Telegram).
+    """API endpoint for creating an order.
+    Validates Mini App initData, converts cart to LabeledPrice list,
+    saves the order (cart + form) and returns invoiceUrl.
     """
     request_data = request.get_json()
 
     auth_data = request_data.get('_auth')
     if auth_data is None or not auth.validate_auth_data(bot.BOT_TOKEN, auth_data):
-        return { 'message': 'Request data should contain auth data.' }, 401
+        return { 'message': 'Request data should contain valid auth data.' }, 401
 
     order_items = request_data.get('cartItems')
     if order_items is None:
         return { 'message': 'Cart Items are not provided.' }, 400
 
+    form = request_data.get('form', {})  # {'name','phone','city','address',...} — приходит из твоей формы MiniApp
+    currency = request_data.get('currency', 'RUB')
+
+    # Prepare LabeledPrice list for Telegram and collect compact cart
     labeled_prices = []
+    compact_cart = []
     for order_item in order_items:
         name = order_item['cafeItem']['name']
         variant = order_item['variant']['name']
-        cost = order_item['variant']['cost']
-        quantity = order_item['quantity']
-        price = int(cost) * PRICE_MULTIPLIER * int(quantity)  # => копейки, целое число
-        labeled_price = LabeledPrice(
-            label=f'{name} ({variant}) x{quantity}',
-            amount=price
-        )
-        labeled_prices.append(labeled_price)
+        cost = int(order_item['variant']['cost'])
+        quantity = int(order_item['quantity'])
 
+        price_minor = cost * PRICE_MULTIPLIER
+        amount = price_minor * quantity
+
+        labeled_prices.append(LabeledPrice(
+            label=f"{name} ({variant}) x{quantity}",
+            amount=amount
+        ))
+
+        compact_cart.append({
+            'name': name,
+            'variant': variant,
+            'qty': quantity,
+            'price_minor': price_minor
+        })
+
+    # Create short order id and save order data (cart + form)
+    order_id = uuid.uuid4().hex[:12]
+    _save_order(order_id, {
+        'created_at': int(time.time()),
+        'cart': compact_cart,
+        'form': form,
+        'currency': currency
+    })
+
+    # Create invoice link with payload containing the order_id
     invoice_url = bot.create_invoice_link(
-        prices=labeled_prices
+        prices=labeled_prices,
+        payload=order_id,
+        currency=currency,
+        need_name=False,
+        need_phone_number=False,
+        need_shipping_address=False
     )
 
-    return { 'invoiceUrl': invoice_url }
+    return { 'invoiceUrl': invoice_url, 'orderId': order_id }
 
 def json_data(data_file_path: str):
     """Extracts data from the JSON file.
@@ -175,6 +209,4 @@ def json_data(data_file_path: str):
     else:
         raise FileNotFoundError()
     
-
-
 bot.refresh_webhook()
