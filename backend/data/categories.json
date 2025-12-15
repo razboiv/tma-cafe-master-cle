@@ -3,7 +3,7 @@
         "id": "burgers",
         "icon": "icons/cat-tshirt.svg",
         "name": "T-SHIRT",
-        "backgroundColor": "rgba(25,25,25,0.90)",
+        "backgroundColor": "rgba(15,55,95,0.90)",
         "color": "#FFFFFF"
     },
     {
