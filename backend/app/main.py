@@ -31,7 +31,7 @@ MENU_DIR = os.path.join(DATA_DIR, "menu")
 DETAILS_DIR = os.path.join(DATA_DIR, "details")
 
 app = Flask(__name__)
-# Разрешаем CORS для всего (фронт на Vercel)
+# Разрешаем CORS (фронт на Vercel). Если нужен более строгий — укажи origin.
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -103,19 +103,54 @@ def _find_item_in_menus(item_id: str) -> Dict[str, Any] | None:
                 return it
     return None
 
+def _read_body() -> dict:
+    """
+    Читаем тело запроса из JSON или form-urlencoded.
+    Если jQuery шлёт form, то items приходит строкой — распарсим.
+    """
+    data = request.get_json(silent=True)
+    if isinstance(data, dict) and data:
+        return data
+
+    # form / x-www-form-urlencoded
+    form = request.form.to_dict(flat=True)
+    if not form:
+        return {}
+
+    # если items — строка JSON
+    if "items" in form and isinstance(form["items"], str):
+        try:
+            form["items"] = json.loads(form["items"])
+        except Exception:
+            # пробуем как список через запятую (на всякий)
+            form["items"] = []
+    # comment может быть строкой
+    if "comment" in form and form["comment"] is None:
+        form["comment"] = ""
+    return form
+
 def _handle_invoice_request(data: dict):
     items = data.get("items") or []
     comment = data.get("comment") or ""
+
+    if not isinstance(items, list) or len(items) == 0:
+        return {"ok": False, "message": "Cart is empty or has wrong format."}, 400
+
     saved_items, prices, total_rub = _prepare_order_and_prices(items, comment)
+
+    if not prices:
+        return {"ok": False, "message": "No valid items to bill."}, 400
+
     order_id = f"ord_{uuid.uuid4().hex[:12]}"
     save_order(order_id, {"items": saved_items, "comment": comment, "total": total_rub})
+
     pay_url = create_invoice_link(
         prices,
         payload=order_id,
         title=f"Order {order_id}",
         description="Оплата заказа"
     )
-    return {"ok": True, "pay_url": pay_url, "payload": order_id}
+    return {"ok": True, "pay_url": pay_url, "payload": order_id}, 200
 
 # ── routes ───────────────────────────────────────────────────────────────────
 @app.get("/health")
@@ -166,25 +201,25 @@ def menu_details(item_id: str):
 def create_invoice():
     # if not auth.is_request_authorized(request):
     #     return {"message": "Unauthorized"}, 401
-    data = request.get_json(silent=True) or {}
+    data = _read_body()
     try:
-        res = _handle_invoice_request(data)
-        return jsonify(res)
+        res, code = _handle_invoice_request(data)
+        return jsonify(res), code
     except Exception as e:
         return {"ok": False, "message": f"Failed to create invoice: {e}"}, 500
 
-# ⚠️ Алиас под фронт, который шлёт /order (и CORS preflight OPTIONS)
+# Алиас под фронт, который шлёт /order (и CORS preflight OPTIONS)
 @app.route("/order", methods=["POST", "OPTIONS"])
 def create_order():
     if request.method == "OPTIONS":
-        # даём ОК на префлайт
+        # CORS preflight OK
         return ("", 204)
     # if not auth.is_request_authorized(request):
     #     return {"message": "Unauthorized"}, 401
-    data = request.get_json(silent=True) or {}
+    data = _read_body()
     try:
-        res = _handle_invoice_request(data)
-        return jsonify(res)
+        res, code = _handle_invoice_request(data)
+        return jsonify(res), code
     except Exception as e:
         return {"ok": False, "message": f"Failed to create order: {e}"}, 500
 
