@@ -17,21 +17,17 @@ from telebot.types import (
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 PAYMENT_PROVIDER_TOKEN = os.getenv('PAYMENT_PROVIDER_TOKEN')
 
-# Если используешь вебхуки:
-WEBHOOK_URL = os.getenv('WEBHOOK_URL')   # полный https://... без трейлинга
-WEBHOOK_PATH = '/bot'                    # должен совпадать с Flask route
-APP_URL = os.getenv('APP_URL')           # URL твоего фронта (Vercel) для WebApp-кнопки
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')   # https://... без трейлинга
+WEBHOOK_PATH = '/bot'
+APP_URL = os.getenv('APP_URL')
 
-# Куда слать уведомления о заказах (канал -100..., или оставь 0 чтобы не слать)
 ORDER_CHANNEL_ID = int(os.getenv('ORDER_CHANNEL_ID', '0'))
-# Список админов через запятую, например "11111111,22222222"
 ADMIN_CHAT_IDS = [int(x) for x in os.getenv('ADMIN_CHAT_IDS', '').split(',') if x]
 
 # ========= BOT =========
 bot: TeleBot = TeleBot(BOT_TOKEN, parse_mode='Markdown')
 
-# ========= ORDERS STORAGE (совместно с Flask main.py) =========
-# main.py сохраняет заказы в data/orders.json (относительно backend/)
+# ========= ORDERS STORAGE =========
 ORDERS_FILE = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', 'data', 'orders.json'))
 
 def _load_orders():
@@ -46,7 +42,6 @@ def _get_order(order_id: str):
     return orders.get(order_id)
 
 def _money(minor: int) -> str:
-    # универсально для валют с 2 знаками после запятой
     return f"{minor/100:.2f}"
 
 def _format_shipping_address(addr) -> str:
@@ -62,11 +57,10 @@ def _format_shipping_address(addr) -> str:
     ]
     return ", ".join([p for p in parts if p])
 
-def _format_order(order: dict, currency: str) -> str:
+def _format_order_cart(order: dict, currency: str) -> str:
+    """Только состав заказа и итог — без повторных персональных данных."""
     cart = order.get('cart', [])
-    form = order.get('form', {})
-    lines = []
-    lines.append('*Состав заказа:*')
+    lines = ['*Состав заказа:*']
     total = 0
     for it in cart:
         qty = int(it.get('qty', 1))
@@ -77,17 +71,10 @@ def _format_order(order: dict, currency: str) -> str:
         lines.append(f"• {title} × {qty} — {_money(line_total)} {currency}")
     lines.append('')
     lines.append(f"*Итого:* {_money(total)} {currency}")
-    lines.append('')
-    lines.append('*Данные покупателя (из формы MiniApp):*')
-    lines.append(f"Имя: {form.get('name','—')}")
-    lines.append(f"Телефон: {form.get('phone','—')}")
-    lines.append(f"Город: {form.get('city','—')}")
-    lines.append(f"Адрес: {form.get('address','—')}")
     return "\n".join(lines)
 
 # ========= WEBHOOK MGMT =========
 def refresh_webhook():
-    """Вызывается из Flask main.py после старта приложения."""
     try:
         bot.delete_webhook()
     except Exception:
@@ -105,7 +92,6 @@ def refresh_webhook():
         )
 
 def process_update(update_json: dict):
-    """Прокидываем апдейт из Flask во внутренний диспетчер telebot."""
     update = Update.de_json(update_json)
     bot.process_new_updates([update])
 
@@ -119,26 +105,18 @@ def handle_start(message: Message):
                      '*Welcome to MAISON NOIR!*\n\nPress the button to open the shop.',
                      reply_markup=markup)
 
-# --- ОБЯЗАТЕЛЬНЫЕ ОБРАБОТЧИКИ ДЛЯ NEED_SHIPPING_ADDRESS ---
+# --- Нужны при need_shipping_address=True ---
 @bot.shipping_query_handler(func=lambda q: True)
 def on_shipping_query(q):
-    """
-    Telegram требует ответить на shipping_query, если включён need_shipping_address.
-    Можно вернуть фикс-опцию «Доставка» без доплаты.
-    """
     try:
         option = ShippingOption(id='flat', title='Доставка').add_price(LabeledPrice('Доставка', 0))
         bot.answer_shipping_query(q.id, ok=True, shipping_options=[option])
     except Exception as e:
-        # Если ошибка — отклоняем и показываем пользователю текст
         bot.answer_shipping_query(q.id, ok=False, error_message='Не удалось рассчитать доставку, попробуйте позже.')
         print('shipping_query error:', e)
 
 @bot.pre_checkout_query_handler(func=lambda q: True)
 def on_pre_checkout(q):
-    """
-    Telegram требует ответить на pre_checkout_query перед списанием средств.
-    """
     try:
         bot.answer_pre_checkout_query(q.id, ok=True)
     except Exception as e:
@@ -153,7 +131,7 @@ def handle_successful_payment(message: Message):
 
     who = f"@{message.from_user.username}" if message.from_user.username else f"id:{message.from_user.id}"
 
-    # Поля, которые Telegram собрал нативно
+    # Данные, собранные Telegram
     tg_name = ''
     tg_phone = ''
     tg_address = ''
@@ -165,15 +143,11 @@ def handle_successful_payment(message: Message):
     except Exception:
         pass
 
-    # Наши сохранённые данные из MiniApp (cart + form), если есть
-    order_text_block = ''
+    # Наш сохранённый заказ (для состава корзины)
     saved_order = _get_order(order_id) if order_id else None
-    if saved_order:
-        order_text_block = _format_order(saved_order, currency)
-    else:
-        order_text_block = '*Сведения о составе заказа из MiniApp не найдены.*'
+    order_text_block = _format_order_cart(saved_order, currency) if saved_order else '*Состав заказа недоступен.*'
 
-    # Текст для админов/канала
+    # ---- Админам / в канал
     admin_lines = [
         '✅ *Новый оплаченный заказ*',
         f'Сумма: *{sp.total_amount/100:.2f} {currency}*',
@@ -189,16 +163,12 @@ def handle_successful_payment(message: Message):
     ]
     notify_admins("\n".join(admin_lines))
 
-    # Сообщение пользователю
-    customer_name = (saved_order or {}).get('form', {}).get('name') or tg_name or (message.from_user.first_name or 'customer')
+    # ---- Пользователю: только спасибо + состав + финальная фраза
+    customer_name = (saved_order or {}).get('form', {}).get('name') or tg_name or (message.from_user.first_name or 'покупатель')
     user_text = (
-        f'Thank you for your order, *{customer_name}*!\n\n'
+        f'Спасибо за ваш заказ, *{customer_name}*.\n\n'
         f'{order_text_block}\n\n'
-        f'*Данные из Telegram:*\n'
-        f'Имя: {tg_name or "—"}\n'
-        f'Телефон: {tg_phone or "—"}\n'
-        f'Адрес: {tg_address or "—"}\n\n'
-        'We will contact you shortly.'
+        'Мы свяжемся с вами в ближайшее время.'
     )
     bot.send_message(chat_id=message.chat.id, text=user_text)
 
@@ -209,7 +179,7 @@ def handle_fallback(message: Message):
     }, row_width=1)
     bot.send_message(message.chat.id, 'Tap the button below to open the shop.', reply_markup=markup)
 
-# ========= INVOICE LINK (нужен main.py) =========
+# ========= INVOICE LINK =========
 def create_invoice_link(
     prices,
     payload: str,
@@ -218,24 +188,17 @@ def create_invoice_link(
     need_phone_number: bool = True,
     need_shipping_address: bool = True
 ) -> str:
-    """
-    Создаёт ссылку на оплату с ВКЛЮЧЁННЫМИ полями Telegram:
-    - Имя
-    - Телефон
-    - Адрес (через shipping)
-    Для need_shipping_address=True ОБЯЗАТЕЛЬНО должны быть хэндлеры shipping_query и pre_checkout_query.
-    """
     return bot.create_invoice_link(
         title='Order',
         description='Оплата заказа в MAISON NOIR',
-        payload=payload,                       # короткий order_id из /order
+        payload=payload,
         provider_token=PAYMENT_PROVIDER_TOKEN,
         currency=currency,
         prices=prices,
         need_name=need_name,
         need_phone_number=need_phone_number,
         need_shipping_address=need_shipping_address,
-        is_flexible=True if need_shipping_address else False  # при адресе обычно flexible
+        is_flexible=True if need_shipping_address else False
     )
 
 # ========= NOTIFICATIONS =========
