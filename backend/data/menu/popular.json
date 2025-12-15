@@ -1,27 +1,27 @@
 [
     {
         "id": "burger-1",
-        "image": "images/clothes/hoodie1.jpg",
-        "name": "REVERSIBLE FUR ZIP",
-        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
+        "image": "images/clothes/tshirt1.jpg",
+        "name": "PHOTO T-SHIRT in BLACK",
+        "description": "— 100% cotton, 220gsm — metallic hardware — silk screen printing + DTG printing — raw seams on sleeves and hem — woven tag inside — Shipping starting December 10",
         "variants": [
             {
                 "id": "s",
-                "name": "L",
-                "cost": "2500",
+                "name": "M",
+                "cost": "2000",
                 "weight": ""
 
             },
             {
                 "id": "l",
-                "name": "M",
-                "cost": "2500",
+                "name": "L",
+                "cost": "2000",
                 "weight": ""
             }
         ]
     },
     {
-        "id": "pizza-1",
+        "id": "pasta-1",
         "image": "images/clothes/jeans1.jpg",
         "name": "27 CLUB DISTRESSED DENIM",
         "description": "—  100% cotton 12oz (~340gsm) premium denim — customized buttoms — stone wash dyeing — distressing — rivets on the front pockets and at the hem — Embroidery on the back pocket — Leather waistband patch — Shipping starting December 10",
@@ -47,21 +47,21 @@
         ]
     },
     {
-        "id": "pasta-1",
-        "image": "images/clothes/tshirt3.jpg",
-        "name": "EDEC T-SHIRT in BLACK",
-        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
+        "id": "pizza-1",
+        "image": "images/clothes/hoodie2.jpg",
+        "name": "REVERSIBLE FUR ZIP HOODIE in GREY",
+        "description": "— Reversible zip — Premium eco-fur — 100% cotton 350gsm French terry — Signature cross puller — Metal zipper — Side pockets on both sides — Woven tag inside — Puff-print — Shipping starting December 10",
         "variants": [
             {
                 "id": "n",
                 "name": "M",
-                "cost": "2000",
+                "cost": "2500",
                 "weight": ""
             },
             {
                 "id": "g",
                 "name": "L",
-                "cost": "2000",
+                "cost": "2500",
                 "weight": ""
             }
         ]
