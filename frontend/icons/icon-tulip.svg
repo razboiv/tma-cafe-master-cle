@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Стебель -->
+  <path d="M32 54V30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Листья -->
+  <path d="M32 44C26 42 22 38 20 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 44C38 42 42 38 44 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Бутон тюльпана -->
+  <path d="M24 30
+           C24 22 28 18 32 18
+           C36 18 40 22 40 30
+           L32 26
+           L24 30Z"
+        stroke="currentColor"
+        stroke-width="2"
+        fill="none"
+        stroke-linejoin="round"/>
+</svg>
