@@ -267,8 +267,8 @@ p.small {
 }
 
 .cafe-category-icon {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     filter: brightness(0) saturate(80%) invert(1);
     opacity: 0.60;
     font-weight: 450;
