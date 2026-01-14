@@ -5,7 +5,7 @@
   
   <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="3"/>
   <circle cx="32" cy="20" r="6" stroke="currentColor" stroke-width="3/>
-  <circle cx="40" cy="24" r="6" stroke="currentColor" stroke-width="3"/>
+  <circle cx="36" cy="24" r="6" stroke="currentColor" stroke-width="3"/>
 
   <path d="M24 30C26 34 28 36 32 36C36 36 38 34 40 30"
         stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
