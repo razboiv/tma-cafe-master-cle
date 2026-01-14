@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Стебель -->
+  <path d="M32 56V36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Лист -->
+  <path d="M32 46C26 44 22 40 20 36"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Пион (лепестки) -->
+  <circle cx="32" cy="26" r="6" stroke="currentColor" stroke-width="2"/>
+  <circle cx="26" cy="28" r="6" stroke="currentColor" stroke-width="2"/>
+  <circle cx="38" cy="28" r="6" stroke="currentColor" stroke-width="2"/>
+  <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="2"/>
+</svg>
