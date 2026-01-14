@@ -1,11 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 960 960" width="24">
+<svg width="80" height="80" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
   <!-- Стебли -->
-  <path d="M440 700h40v160h-40v-160Zm80 0h40v160h-40v-160Zm-160 0h40v160h-40v-160Z"/>
+  <path d="M26 56V36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 56V34" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 56V36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+
   <!-- Цветы -->
-  <circle cx="460" cy="500" r="60"/>
-  <circle cx="560" cy="450" r="60"/>
-  <circle cx="360" cy="450" r="60"/>
-  <!-- Лепестки (упрощённо) -->
-  <path d="M460 440l0-80 M460 560l0 80 M400 500l-80 0 M520 500l80 0"/>
-  <path d="M560 390l-60-60 M560 510l-60 60 M360 390l60-60 M360 510l60 60"/>
+  <circle cx="26" cy="32" r="6" stroke="currentColor" stroke-width="3"/>
+  <circle cx="32" cy="28" r="6" stroke="currentColor" stroke-width="3"/>
+  <circle cx="38" cy="32" r="6" stroke="currentColor" stroke-width="3"/>
+
+  <!-- Перевязка -->
+  <path d="M24 46H40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 </svg>
