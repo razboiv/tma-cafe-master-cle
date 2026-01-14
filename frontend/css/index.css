@@ -267,11 +267,11 @@ p.small {
 }
 
 .cafe-category-icon {
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
     filter: brightness(0) saturate(80%) invert(1);
     opacity: 0.60;
-    font-weight: 450;
+    font-weight: 480;
 }
 
 .cafe-category-name {
