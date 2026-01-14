@@ -8,8 +8,8 @@
     },
     {
         "id": "pizza",
-        "icon": "icons/cat-hoodie.svg",
-        "name": "HOODIE",
+        "icon": "icons/icon-rose.svg",
+        "name": "Rose",
         "backgroundColor": "rgba(25,25,25,0.90)",
         "color": "#FFFFFF"
     },
