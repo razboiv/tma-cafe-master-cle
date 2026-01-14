@@ -3,28 +3,28 @@
         "id": "burgers",
         "icon": "icons/icon-bouquet.svg",
         "name": "Bouquet",
-        "backgroundColor": "rgba(25,25,25,0.90)",
+        "backgroundColor": "rgba(255,255,255,0.90)",
         "color": "#FFFFFF"
     },
     {
         "id": "pizza",
         "icon": "icons/icon-rose.svg",
         "name": "Rose",
-        "backgroundColor": "rgba(25,25,25,0.90)",
-        "color": "#C62828"
+        "backgroundColor": "rgba(180,30,30,0.90)",
+        "color": "#FFFFFF"
     },
     {
         "id": "pasta",
         "icon": "icons/icon-tulip.svg",
         "name": "Tulip",
-        "backgroundColor": "rgba(25,25,25,0.90)",
-        "color": "#FBC02D"
+        "backgroundColor": "rgba(245,200,40,0.90)",
+        "color": "#FFFFFF"
     },
     {
         "id": "ice-cream",
         "icon": "icons/icon-peony.svg",
         "name": "Peony",
-        "backgroundColor": "rgba(25,25,25,0.90)",
-        "color": "#C3A6E8"
+        "backgroundColor": "rgba(215,190,235,0.90)",
+        "color": "#FFFFFF"
     }
 ]
