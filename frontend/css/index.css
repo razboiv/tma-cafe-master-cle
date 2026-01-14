@@ -177,6 +177,7 @@ p.small {
 .cafe-kitchen-categories {
     min-height: 1em;
     margin-top: 2px;
+    font-weight: 600;
 }
 
 .cafe-parameters-container {
@@ -198,6 +199,7 @@ p.small {
     width: 16px;
     height: 16px;
     margin-right: 4px;
+    font-weight: 600;
 }
 
 .cafe-parameter-value {
@@ -560,16 +562,4 @@ p.small {
     100% {
         background-position: 1200px 0;
     }
-}
-
-/* Open: белый фон + чёрный текст */
-.cafe-status {
-  background-color: #fff !important;
-  color: #000 !important;
-  border: 1px solid rgba(0,0,0,.18);
-}
-
-.cafe-status svg {
-  stroke: #000 !important;
-  fill: none !important;
 }
