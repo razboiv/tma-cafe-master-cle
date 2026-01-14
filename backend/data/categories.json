@@ -2,28 +2,28 @@
     {
         "id": "burgers",
         "icon": "icons/icon-bouquet.svg",
-        "name": "БУКЕТ",
+        "name": "Букет",
         "backgroundColor": "rgba(255,240,212,0.70)",
         "color": "#FFFFFF"
     },
     {
         "id": "pizza",
         "icon": "icons/icon-rose.svg",
-        "name": "РОЗА",
+        "name": "Роза",
         "backgroundColor": "rgba(128,0,32,0.70)",
         "color": "#FFFFFF"
     },
     {
         "id": "pasta",
         "icon": "icons/icon-tulip.svg",
-        "name": "ТЮЛЬПАН",
+        "name": "Тюльпан",
         "backgroundColor": "rgba(255,191,0,0.70)",
         "color": "#FFFFFF"
     },
     {
         "id": "ice-cream",
         "icon": "icons/icon-peony.svg",
-        "name": "ПИОН",
+        "name": "Пион",
         "backgroundColor": "rgba(89,49,99,0.70)",
         "color": "#FFFFFF"
     }
