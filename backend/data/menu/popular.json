@@ -48,14 +48,8 @@
         "variants": [
             {
                 "id": "n",
-                "name": "M",
-                "cost": "2500",
-                "weight": ""
-            },
-            {
-                "id": "g",
-                "name": "L",
-                "cost": "2500",
+                "name": "💐",
+                "cost": "6000",
                 "weight": ""
             }
         ]
