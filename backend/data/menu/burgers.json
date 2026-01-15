@@ -1,83 +1,99 @@
 [
     {
         "id": "burger-1",
-        "image": "images/clothes/tshirt1.jpg",
-        "name": "PHOTO T-SHIRT in BLACK",
-        "description": "— 100% cotton, 220gsm — metallic hardware — silk screen printing + DTG printing — raw seams on sleeves and hem — woven tag inside — Shipping starting December 10",
+        "image": "images/flowers/bouquet1.jpg",
+        "name": "Silent dialogue",
+        "description": "Autumn makes its way into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫",
         "variants": [
             {
                 "id": "s",
-                "name": "M",
-                "cost": "2000",
-                "weight": ""
-
-            },
-            {
-                "id": "l",
-                "name": "L",
-                "cost": "2000",
+                "name": "💐",
+                "cost": "5000",
                 "weight": ""
             }
         ]
     },
     {
         "id": "burger-2",
-        "image": "images/clothes/tshirt2.jpg",
-        "name": "CHAINS TEE in WHITE",
-        "description": "— 100% cotton, 220gsm — metallic hardware — silk screen printing + DTG printing — distressing — raw seams on sleeves and hem — woven tag inside — Shipping starting December 10",
+        "image": "images/flowers/bouquet2.jpg",
+        "name": "Echo of silence",
+        "description": "Our autumn compositions are ready to brighten your days! We create bouquets according to your wishes and for a budget that suits you. Place your order and let autumn into your home 🍂🍁",
         "variants": [
             {
                 "id": "s",
-                "name": "M",
-                "cost": "2000",
+                "name": "",
+                "cost": "5000",
                 "weight": ""
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2000",
+                "cost": "5000",
                 "weight": ""
             }
         ]
     },
     {
         "id": "burger-3",
-        "image": "images/clothes/tshirt3.jpg",
-        "name": "EDEC T-SHIRT in BLACK",
-        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
+        "image": "images/flowers/bouquet3.jpg",
+        "name": "Garden of Dreams",
+        "description": "",
         "variants": [
             {
                 "id": "s",
                 "name": "M",
-                "cost": "2000",
+                "cost": "5000",
                 "weight": ""
             },
             {
                 "id": "l",
                 "name": "L",
-                "cost": "2000",
+                "cost": "5000",
                 "weight": ""
             }
         ]
     },
     {
         "id": "burger-4",
-        "image": "images/clothes/tshirt4.jpg",
-        "name": "EDEC T-SHIRT in WHITE",
-        "description": "— 95% cotton / 5% elastane, 220gsm — silkscreen print — woven tag inside. Slim fit, go for a bigger size to get it more oversized.",
+        "image": "images/flowers/bouquet4.jpg",
+        "name": "Flower Extravaganza",
+        "description": "Autumn invites itself into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫⭐️",
         "variants": [
             {
                 "id": "s",
-                "name": "M",
-                "cost": "2000",
-                "weight": ""
-            },
-            {
-                "id": "l",
-                "name": "L",
-                "cost": "2000",
+                "name": "💐",
+                "cost": "6000",
                 "weight": ""
             }
         ]
-    }
+    },
+    {
+        "id": "burger-5",
+        "image": "images/flowers/bouquet5.jpg",
+        "name": "Pink Dawn",
+        "description": "Autumn invites itself into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫⭐️",
+        "variants": [
+            {
+                "id": "s",
+                "name": "💐",
+                "cost": "6000",
+                "weight": ""
+            }
+        ]
+    },
+    {
+        "id": "burger-6",
+        "image": "images/flowers/bouquet6.jpg",
+        "name": "Summer Breeze",
+        "description": "Magnificent bouquets await you in our boutique 🍀 Come visit us or take advantage of delivery throughout Paris 🍀",
+        "variants": [
+            {
+                "id": "s",
+                "name": "💐",
+                "cost": "6000",
+                "weight": ""
+            }
+        ]
+    },
+    
 ]
