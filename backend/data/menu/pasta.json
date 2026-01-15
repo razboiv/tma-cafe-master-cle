@@ -1,80 +1,56 @@
 [
     {
         "id": "pasta-1",
-        "image": "images/clothes/jeans1.jpg",
-        "name": "27 CLUB DISTRESSED DENIM in GREY",
-        "description": "—  100% cotton 12oz (~340gsm) premium denim — customized buttoms — stone wash dyeing — distressing — rivets on the front pockets and at the hem — Embroidery on the back pocket — Leather waistband patch — Shipping starting December 10",
+        "image": "images/flowers/tulip1.jpg",
+        "name": "A delicate classic",
+        "description": "Pure passion blooms in scarlet petals... Red tulips, elegant and eternal, capture the very essence of emotion. Each tulip is a beating heart in your hands.🌷",
         "variants": [
             {
                 "id": "n",
-                "name": "M",
-                "cost": "2500",
-                "weight": ""
-            },
-            {
-                "id": "g",
-                "name": "L",
-                "cost": "2500",
+                "name": "1🌷",
+                "cost": "300",
                 "weight": ""
             }
         ]
     },
     {
         "id": "pasta-2",
-        "image": "images/clothes/jeans2.jpg",
-        "name": "27 CLUB DISTRESSED DENIM in BLUE",
-        "description": "—  100% cotton 12oz (~340gsm) premium denim — customized buttoms — stone wash dyeing — distressing — rivets on the front pockets and at the hem — Embroidery on the back pocket — Leather waistband patch — Shipping starting December 10",
+        "image": "images/flowers/tulip2.jpg",
+        "name": "Spring Kiss",
+        "description": "A ray of sun caught in a bud... Yellow tulips, shining with simple joy and inner light. Each petal carries the promise of a clear day and a warm memory.☀️",
         "variants": [
             {
                 "id": "n",
-                "name": "M",
-                "cost": "2500",
-                "weight": ""
-            },
-            {
-                "id": "g",
-                "name": "L",
-                "cost": "2500",
+                "name": "1🌷",
+                "cost": "300",
                 "weight": ""
             }
         ]
     },
     {
         "id": "pasta-3",
-        "image": "images/clothes/jeans3.jpg",
-        "name": "FLARED CROSS CHARM DENIM in BLACK",
-        "description": "— 100% cotton 13.5oz (~382gsm) premium denim — Signature cross charms — Customized buttons — Embroidery on the back pocket — Leather waistband patch",
+        "image": "images/flowers/tulip3.jpg",
+        "name": "Pastel Tenderness",
+        "description": "Spring tenderness sealed in a petal... Pastel-colored tulips, as delicate as a sigh, and as poetic as a first morning. Each color tells a story of tenderness and renewal.🌸",
         "variants": [
             {
                 "id": "n",
-                "name": "M",
-                "cost": "2500",
-                "weight": ""
-            },
-            {
-                "id": "g",
-                "name": "L",
-                "cost": "2500",
+                "name": "1🌷",
+                "cost": "300",
                 "weight": ""
             }
         ]
     },
     {
         "id": "pasta-4",
-        "image": "images/clothes/jeans4.jpg",
-        "name": "FLARED CROSS CHARM DENIM in BLUE",
-        "description": "— 100% cotton 13.5oz (~382gsm) premium denim — Signature cross charms — Customized buttons — Embroidery on the back pocket — Leather waistband patch",
+        "image": "images/flowers/tulip4.jpg",
+        "name": "The heart of a bud",
+        "description": "Tenderness embodied in shades of pink... Tulips the color of the morning dawn, delicate as a sigh, and pure as a promise. Each bud whispers a story of delicacy and bloom.🌺",
         "variants": [
             {
                 "id": "n",
-                "name": "M",
-                "cost": "2500",
-                "weight": ""
-            },
-            {
-                "id": "g",
-                "name": "L",
-                "cost": "2500",
+                "name": "1🌷",
+                "cost": "300",
                 "weight": ""
             }
         ]
