@@ -66,34 +66,6 @@
                 "weight": ""
             }
         ]
-    },
-    {
-        "id": "burger-5",
-        "image": "images/flowers/bouquet5.jpg",
-        "name": "Pink Dawn",
-        "description": "Autumn invites itself into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫⭐️",
-        "variants": [
-            {
-                "id": "s",
-                "name": "💐",
-                "cost": "6000",
-                "weight": ""
-            }
-        ]
-    },
-    {
-        "id": "burger-6",
-        "image": "images/flowers/bouquet6.jpg",
-        "name": "Summer Breeze",
-        "description": "Magnificent bouquets await you in our boutique 🍀 Come visit us or take advantage of delivery throughout Paris 🍀",
-        "variants": [
-            {
-                "id": "s",
-                "name": "💐",
-                "cost": "6000",
-                "weight": ""
-            }
-        ]
-    },
+    }
     
 ]
