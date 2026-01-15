@@ -102,7 +102,7 @@ def handle_start(message: Message):
         'Open shop': {'web_app': WebAppInfo(APP_URL)}
     }, row_width=1)
     bot.send_message(message.chat.id,
-                     '*Welcome to MAISON NOIR!*\n\nPress the button to open the shop.',
+                     '*Welcome to La Fleur!✨*\n\nPress the button to open the shop.',
                      reply_markup=markup)
 
 # --- Нужны при need_shipping_address=True ---
@@ -166,9 +166,9 @@ def handle_successful_payment(message: Message):
     # ---- Пользователю: только спасибо + состав + финальная фраза
     customer_name = (saved_order or {}).get('form', {}).get('name') or tg_name or (message.from_user.first_name or 'покупатель')
     user_text = (
-        f'Спасибо за ваш заказ, *{customer_name}*. 🧟\n\n'
+        f'Спасибо за ваш заказ, *{customer_name}*.🙏🏻\n\n'
         f'{order_text_block}\n\n'
-        'Мы свяжемся с вами в ближайшее время. 👁️👁️'
+        'Мы свяжемся с вами в ближайшее время. 🌷'
     )
     bot.send_message(chat_id=message.chat.id, text=user_text)
 
@@ -190,7 +190,7 @@ def create_invoice_link(
 ) -> str:
     return bot.create_invoice_link(
         title='Order',
-        description='Оплата заказа в MAISON NOIR',
+        description='Оплата заказа в La Fleur',
         payload=payload,
         provider_token=PAYMENT_PROVIDER_TOKEN,
         currency=currency,
