@@ -70,8 +70,8 @@
     {
         "id": "burger-5",
         "image": "images/flowers/bouquet5.jpg",
-        "name": "Flower Extravaganza",
-        "description": "Autumn invites itself into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫⭐️",
+        "name": "Pink Dawn",
+        "description": "Our autumn compositions are ready to brighten your days! We create bouquets according to your wishes and for a budget that suits you. Place your order and let autumn into your home 🍂🍁",
         "variants": [
             {
                 "id": "s",
@@ -84,8 +84,8 @@
     {
         "id": "burger-6",
         "image": "images/flowers/bouquet6.jpg",
-        "name": "Flower Extravaganza",
-        "description": "Autumn invites itself into our bouquets... Deep dahlias, sumptuous chrysanthemums, and flamboyant foliage. Every detail tells the warmth of the season.💫⭐️",
+        "name": "Summer Breeze",
+        "description": "Magnificent bouquets await you in our boutique 🍀 Come visit us or take advantage of delivery throughout Paris 🍀",
         "variants": [
             {
                 "id": "s",
