@@ -1,0 +1,84 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  width="200" 
+  height="240" 
+  viewBox="0 0 200 240">
+    
+  <!-- Left leaf (drawn first as background layer) -->
+  <path 
+    fill="#4A9E66" 
+    stroke="#1F5A3E" 
+    stroke-width="3.5" 
+    stroke-linejoin="round"
+    d="M100,162 
+       C72,149 38,118 29,71 
+       C36,68 54,96 97,161Z" />
+       
+  <!-- Right leaf -->
+  <path 
+    fill="#4A9E66" 
+    stroke="#1F5A3E" 
+    stroke-width="3.5" 
+    stroke-linejoin="round"
+    d="M100,162 
+       C128,149 162,117 171,72 
+       C164,75 145,102 103,161Z" />
+       
+  <!-- Left leaf central vein -->
+  <path 
+    fill="transparent" 
+    stroke="#1F5A3E" 
+    stroke-width="2.2" 
+    stroke-linejoin="round"
+    d="M100,162 
+       C75,147 47,113 29,71" />
+       
+  <!-- Right leaf central vein -->
+  <path 
+    fill="transparent" 
+    stroke="#1F5A3E" 
+    stroke-width="2.2" 
+    stroke-linejoin="round"
+    d="M100,162 
+       C123,148 155,114 171,72" />
+       
+  <!-- Stem (slightly curved for natural look, drawn over leaves) -->
+  <path 
+    fill="transparent" 
+    stroke="#4A9E66" 
+    stroke-width="5.5" 
+    stroke-linejoin="round"
+    d="M100,99 
+       C98,138 101,167 100,217" />
+       
+  <!-- Left outer petal (back layer) - slightly darker for depth -->
+  <path 
+    fill="#E93F5C" 
+    stroke="#1F5A3E" 
+    stroke-width="3" 
+    stroke-linejoin="round"
+    d="M73,95 
+       C67,73 54,54 59,38 
+       C70,36 81,57 100,95Z" />
+       
+  <!-- Right outer petal (back layer) -->
+  <path 
+    fill="#E93F5C" 
+    stroke="#1F5A3E" 
+    stroke-width="3" 
+    stroke-linejoin="round"
+    d="M127,95 
+       C133,73 146,54 141,38 
+       C130,36 119,57 100,95Z" />
+       
+  <!-- Center front petal (top layer, brighter, slightly extended tip) -->
+  <path 
+    fill="#FF4D6A" 
+    stroke="#1F5A3E" 
+    stroke-width="3" 
+    stroke-linejoin="round"
+    d="M80,94 
+       C78,68 86,41 100,27 
+       C113,40 120,66 120,94Z" />
+       
+</svg>

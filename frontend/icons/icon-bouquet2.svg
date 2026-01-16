@@ -1,0 +1,1704 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  width="200" 
+  height="200" 
+  viewBox="0 0 200 200">
+    
+  <!-- Stems (back layer, converging at bottom) -->
+  <g>
+    <!-- Main central stem -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3.5" 
+      stroke-linecap="round" 
+      d="M100,162 C100,125 100,95 100,64" />
+      
+    <!-- Left stems fanning out -->
+    <!-- Stem 1 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M100,162 C87,133 74,98 69,63" />
+      
+    <!-- Stem 2 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3.2" 
+      stroke-linecap="round" 
+      d="M100,162 C84,138 67,107 57,81" />
+      
+    <!-- Stem 3 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="2.8" 
+      stroke-linecap="round" 
+      d="M100,162 C91,130 80,92 77,57" />
+      
+    <!-- Stem 4 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M100,162 C95,136 85,100 73,72" />
+      
+    <!-- Right stems fanning out -->
+    <!-- Stem 5 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3.5" 
+      stroke-linecap="round" 
+      d="M100,162 C108,130 120,102 130,73" />
+      
+    <!-- Stem 6 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M100,162 C112,137 125,105 142,72" />
+      
+    <!-- Stem 7 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="2.8" 
+      stroke-linecap="round" 
+      d="M100,162 C105,133 115,95 123,61" />
+      
+    <!-- Stem 8 -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="3" 
+      stroke-linecap="round" 
+      d="M100,162 C96,129 88,88 81,55" />
+    
+    <!-- Stem 9 (far right) -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="2.5" 
+      stroke-linecap="round" 
+      d="M100,162 C113,140 133,95 148,68" />
+      
+    <!-- Stem 10 (far left) -->
+    <path 
+      fill="transparent" 
+      stroke="#3F693A" 
+      stroke-width="2.7" 
+      stroke-linecap="round" 
+      d="M100,162 C85,135 64,102 50,77" />
+  </g>
+    
+  <!-- Back layer leaves (left side) -->
+  <g>
+    <!-- Left large leaf 1 (lower) -->
+    <g transform="translate(68,133) rotate(-98) scale(1.05)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,4 
+           C-16,-18 -17,-38 0,-57 
+           C15,-39 14,-17 0,4Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-6,-15 -4,-33 0,-55" />
+    </g>
+    
+    <!-- Left leaf 2 (mid lower) -->
+    <g transform="translate(56,114) rotate(-79) scale(0.95)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,4 
+           C-14,-16 -15,-35 0,-53 
+           C13,-36 12,-15 0,4Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-5,-14 -3,-30 0,-51" />
+    </g>
+    
+    <!-- Left leaf 3 (mid) -->
+    <g transform="translate(49,94) rotate(-64) scale(0.85)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,3 
+           C-12,-14 -13,-30 0,-46 
+           C11,-31 10,-13 0,3Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-4,-12 -3,-26 0,-44" />
+    </g>
+    
+    <!-- Left leaf 4 (upper) -->
+    <g transform="translate(47,76) rotate(-47) scale(0.75)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,3 
+           C-10,-12 -11,-26 0,-39 
+           C9,-27 9,-12 0,3Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-3,-10 -2,-22 0,-37" />
+    </g>
+    
+    <!-- Left leaf 5 (far upper side) -->
+    <g transform="translate(58,67) rotate(-28) scale(0.65)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-8,-10 -9,-22 0,-33 
+           C8,-22 7,-9 0,2Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.5" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-3,-8 -2,-19 0,-31" />
+    </g>
+  </g>
+  
+  <!-- Back layer leaves (right side) -->
+  <g>
+    <!-- Right large leaf 1 (lower, mirrored) -->
+    <g transform="translate(132,133) rotate(98) scale(1.05)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,4 
+           C-16,-18 -17,-38 0,-57 
+           C15,-39 14,-17 0,4Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-6,-15 -4,-33 0,-55" />
+    </g>
+    
+    <!-- Right leaf 2 (mid lower) -->
+    <g transform="translate(144,114) rotate(79) scale(0.95)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,4 
+           C-14,-16 -15,-35 0,-53 
+           C13,-36 12,-15 0,4Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-5,-14 -3,-30 0,-51" />
+    </g>
+    
+    <!-- Right leaf 3 (mid) -->
+    <g transform="translate(151,95) rotate(65) scale(0.85)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,3 
+           C-12,-14 -13,-30 0,-46 
+           C11,-31 10,-13 0,3Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-4,-12 -3,-26 0,-44" />
+    </g>
+    
+    <!-- Right leaf 4 (upper) -->
+    <g transform="translate(153,77) rotate(48) scale(0.78)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,3 
+           C-10,-12 -11,-26 0,-39 
+           C9,-27 9,-12 0,3Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.8" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-3,-10 -2,-22 0,-37" />
+    </g>
+    
+    <!-- Right leaf 5 (far upper side) -->
+    <g transform="translate(142,68) rotate(29) scale(0.65)">
+      <!-- Leaf body -->
+      <path 
+        fill="#58914A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M0,2 
+           C-8,-10 -9,-22 0,-33 
+           C8,-22 7,-9 0,2Z" />
+      <!-- Leaf vein -->
+      <path 
+        fill="transparent" 
+        stroke="#263D28" 
+        stroke-width="1.5" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-3,-8 -2,-19 0,-31" />
+    </g>
+  </g>
+    
+  <!-- Wrapper/cone (paper wrap around stems) -->
+  <g>
+    <!-- Main wrapper shape (kraft paper color, flared at top) -->
+    <path 
+      fill="#EFCFA4" 
+      stroke="#263D28" 
+      stroke-width="3.2" 
+      stroke-linejoin="round"
+      d="M73,129 
+         L74,146 
+         C78,156 87,165 100,169 
+         C113,165 122,156 126,146 
+         L127,129 
+         C118,123 105,119 100,119 
+         C90,119 80,122 73,129Z" />
+    
+    <!-- Wrapper crease/fold lines (subtle) -->
+    <!-- Left crease -->
+    <path 
+      fill="transparent" 
+      stroke="#D9B98A" 
+      stroke-width="2.5" 
+      stroke-linejoin="round"
+      d="M80,127 C84,136 89,148 93,163" />
+    
+    <!-- Right crease -->
+    <path 
+      fill="transparent" 
+      stroke="#D9B98A" 
+      stroke-width="2.5" 
+      stroke-linejoin="round"
+      d="M120,127 C116,136 111,148 107,163" />
+  </g>
+    
+  <!-- Bow/ribbon (tied around wrapper) -->
+  <g transform="translate(100,153)">
+    <!-- Left upper bow loop -->
+    <path 
+      fill="#FF6A8A" 
+      stroke="#263D28" 
+      stroke-width="2.8" 
+      stroke-linejoin="round"
+      d="M0,0 
+         C-9,-19 -22,-22 -28,-9 
+         C-31,0 -22,9 -4,3Z" />
+         
+    <!-- Left lower bow loop -->
+    <path 
+      fill="#FF6A8A" 
+      stroke="#263D28" 
+      stroke-width="2.8" 
+      stroke-linejoin="round"
+      d="M0,1 
+         C-8,16 -21,19 -28,8 
+         C-30,1 -21,-6 -5,1Z" />
+         
+    <!-- Right upper bow loop (mirrored) -->
+    <g transform="scale(-1,1)">
+      <path 
+        fill="#FF6A8A" 
+        stroke="#263D28" 
+        stroke-width="2.8" 
+        stroke-linejoin="round"
+        d="M0,0 
+           C-9,-19 -22,-22 -28,-9 
+           C-31,0 -22,9 -4,3Z" />
+    </g>
+    
+    <!-- Right lower bow loop (mirrored) -->
+    <g transform="scale(-1,1)">
+      <path 
+        fill="#FF6A8A" 
+        stroke="#263D28" 
+        stroke-width="2.8" 
+        stroke-linejoin="round"
+        d="M0,1 
+           C-8,16 -21,19 -28,8 
+           C-30,1 -21,-6 -5,1Z" />
+    </g>
+    
+    <!-- Center knot cover -->
+    <rect 
+      x="-4" 
+      y="-3" 
+      width="8" 
+      height="7" 
+      rx="1" 
+      fill="#FF6A8A" 
+      stroke="#263D28" 
+      stroke-width="2.5" />
+      
+    <!-- Left ribbon tail -->
+    <path 
+      fill="#FF6A8A" 
+      stroke="#263D28" 
+      stroke-width="2.5" 
+      stroke-linejoin="round"
+      d="M-3,3 
+         C-7,12 -11,20 -16,26 
+         L-19,28 
+         L-11,29 
+         L-6,17Z" />
+         
+    <!-- Right ribbon tail (mirrored) -->
+    <g transform="scale(-1,1)">
+      <path 
+        fill="#FF6A8A" 
+        stroke="#263D28" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        d="M-3,3 
+           C-7,12 -11,20 -16,26 
+           L-19,28 
+           L-11,29 
+           L-6,17Z" />
+    </g>
+  </g>
+    
+  <!-- Flowers (front layer) - placed from back/lower to front/upper -->
+  
+  <!-- Lower left mid tulip (coral) -->
+  <g transform="translate(56,74) rotate(-56)">
+    <!-- Tulip base/sepal (green) -->
+    <path 
+      fill="#4A7E4A" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-23 L-8,-32 L8,-32Z" />
+    <!-- Left petal -->
+    <path 
+      fill="#FF7E5E" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-26 
+         C-16,-37 -17,-49 -7,-57 
+         C-2,-54 0,-40 0,-26Z" />
+    <!-- Right petal -->
+    <path 
+      fill="#FF7E5E" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-26 
+         C16,-37 16,-49 6,-57 
+         C2,-54 0,-40 0,-26Z" />
+    <!-- Center front petal (slightly lighter) -->
+    <path 
+      fill="#FF9473" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-27 
+         C-7,-42 -4,-52 0,-58 
+         C4,-53 7,-43 0,-27Z" />
+  </g>
+  
+  <!-- Lower right mid tulip (pink) -->
+  <g transform="translate(141,77) rotate(51)">
+    <!-- Tulip base/sepal (green) -->
+    <path 
+      fill="#4A7E4A" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-23 L-8,-32 L8,-32Z" />
+    <!-- Left petal -->
+    <path 
+      fill="#FF6F95" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-26 
+         C-16,-37 -17,-49 -7,-57 
+         C-2,-54 0,-40 0,-26Z" />
+    <!-- Right petal -->
+    <path 
+      fill="#FF6F95" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-26 
+         C16,-37 16,-49 6,-57 
+         C2,-54 0,-40 0,-26Z" />
+    <!-- Center front petal (slightly lighter) -->
+    <path 
+      fill="#FF8AA8" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-27 
+         C-7,-42 -4,-52 0,-58 
+         C4,-53 7,-43 0,-27Z" />
+  </g>
+  
+  <!-- Mid left rose (yellow, smaller) -->
+  <g transform="translate(49,63) rotate(-18) scale(0.78)">
+    <!-- Outer petal layer (8 petals) -->
+    <!-- Petals at 0,45,90... -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#FFE17D" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+    </g>
+    
+    <!-- Inner petal layer (offset, lighter) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (22.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(22.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (67.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(67.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (112.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(112.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (157.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(157.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (202.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(202.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (247.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(247.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (292.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(292.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (337.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#FFED9E" 
+        transform="rotate(337.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="4.5" 
+      fill="#FF9F4A" 
+      stroke="#263D28" 
+      stroke-width="2.2" />
+  </g>
+  
+  <!-- Mid right rose (lavender, smaller) -->
+  <g transform="translate(145,64) rotate(25) scale(0.82)">
+    <!-- Outer petal layer (8 petals) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="8" 
+        ry="14" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+    </g>
+    
+    <!-- Inner petal layer (offset, lighter) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (22.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(22.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (67.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(67.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (112.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(112.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (157.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(157.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (202.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(202.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (247.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(247.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (292.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(292.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (337.5°) -->
+      <ellipse 
+        rx="6" 
+        ry="10" 
+        cy="-5" 
+        fill="#BFA1E0" 
+        transform="rotate(337.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="4.5" 
+      fill="#FFBA5E" 
+      stroke="#263D28" 
+      stroke-width="2.2" />
+  </g>
+  
+  <!-- Central large rose (pink) -->
+  <g transform="translate(100,54) rotate(5) scale(1.12)">
+    <!-- Outer petal layer (8 petals) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="9.5" 
+        ry="16" 
+        cy="-8" 
+        fill="#FF6F95" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2.5" />
+    </g>
+    
+    <!-- Inner petal layer (offset, lighter) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (22.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(22.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 2 (67.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(67.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 3 (112.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(112.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 4 (157.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(157.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 5 (202.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(202.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 6 (247.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(247.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 7 (292.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(292.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+      <!-- Petal 8 (337.5°) -->
+      <ellipse 
+        rx="7" 
+        ry="11.5" 
+        cy="-5" 
+        fill="#FF8EAC" 
+        transform="rotate(337.5)" 
+        stroke="#263D28" 
+        stroke-width="2.2" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="5.5" 
+      fill="#FF9F4A" 
+      stroke="#263D28" 
+      stroke-width="2.5" />
+  </g>
+  
+  <!-- Upper left rose (lavender) -->
+  <g transform="translate(71,44) rotate(-27) scale(0.92)">
+    <!-- Outer petal layer (8 petals) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14.5" 
+        cy="-7" 
+        fill="#A37ED4" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+    </g>
+    
+    <!-- Inner petal layer (offset, lighter) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (22.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(22.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (67.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(67.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (112.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(112.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (157.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(157.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (202.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(202.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (247.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(247.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (292.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(292.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (337.5°) -->
+      <ellipse 
+        rx="6.5" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#BFA1E0" 
+        transform="rotate(337.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="4.8" 
+      fill="#FFBA5E" 
+      stroke="#263D28" 
+      stroke-width="2.3" />
+  </g>
+  
+  <!-- Upper right rose (coral) -->
+  <g transform="translate(126,44) rotate(29) scale(0.88)">
+    <!-- Outer petal layer (8 petals) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="8.5" 
+        ry="14" 
+        cy="-7" 
+        fill="#FF7E5E" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2.3" />
+    </g>
+    
+    <!-- Inner petal layer (offset, lighter) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (22.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(22.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (67.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(67.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (112.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(112.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (157.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(157.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (202.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(202.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (247.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(247.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (292.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(292.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (337.5°) -->
+      <ellipse 
+        rx="6.2" 
+        ry="10" 
+        cy="-4.5" 
+        fill="#FF9473" 
+        transform="rotate(337.5)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="4.8" 
+      fill="#FF9F4A" 
+      stroke="#263D28" 
+      stroke-width="2.3" />
+  </g>
+  
+  <!-- Top center-left small flower (pink) -->
+  <g transform="translate(81,37) rotate(-12) scale(0.68)">
+    <!-- Outer petal layer (8 petals, slightly smaller) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FF6F95" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Inner petal layer (offset) -->
+    <g>
+      <!-- Inner petals at offset angles (4 visible main) -->
+      <!-- Petal 1 (25°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(25)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 2 (70°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(70)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 3 (115°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(115)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 4 (160°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(160)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 5 (205°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(205)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 6 (250°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(250)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 7 (295°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(295)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 8 (340°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FF8EAC" 
+        transform="rotate(340)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="3.5" 
+      fill="#FF9F4A" 
+      stroke="#263D28" 
+      stroke-width="2" />
+  </g>
+  
+  <!-- Top center-right small flower (yellow) -->
+  <g transform="translate(119,38) rotate(16) scale(0.7)">
+    <!-- Outer petal layer (8 petals, slightly smaller) -->
+    <g>
+      <!-- Petal 1 (0°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(0)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 2 (45°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(45)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 3 (90°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(90)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 4 (135°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(135)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 5 (180°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(180)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 6 (225°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(225)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 7 (270°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(270)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+      <!-- Petal 8 (315°) -->
+      <ellipse 
+        rx="7" 
+        ry="11" 
+        cy="-5" 
+        fill="#FFE17D" 
+        transform="rotate(315)" 
+        stroke="#263D28" 
+        stroke-width="2" />
+    </g>
+    
+    <!-- Inner petal layer (offset) -->
+    <g>
+      <!-- Inner petals at offset angles -->
+      <!-- Petal 1 (25°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(25)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 2 (70°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(70)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 3 (115°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(115)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 4 (160°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(160)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 5 (205°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(205)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 6 (250°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(250)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 7 (295°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(295)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+      <!-- Petal 8 (340°) -->
+      <ellipse 
+        rx="4.5" 
+        ry="7.5" 
+        cy="-3.5" 
+        fill="#FFED9E" 
+        transform="rotate(340)" 
+        stroke="#263D28" 
+        stroke-width="1.8" />
+    </g>
+    
+    <!-- Flower center -->
+    <circle 
+      r="3.5" 
+      fill="#FF9F4A" 
+      stroke="#263D28" 
+      stroke-width="2" />
+  </g>
+  
+  <!-- Far left small bud (pink) -->
+  <g transform="translate(40,58) rotate(-35) scale(0.55)">
+    <!-- Bud petals (closed tulip-like) -->
+    <!-- Left bud petal -->
+    <path 
+      fill="#FF7E5E" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-8 
+         C-7,-17 -6,-24 -1,-29 
+         C0,-26 0,-17 0,-8Z" />
+    <!-- Right bud petal -->
+    <path 
+      fill="#FF7E5E" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-8 
+         C7,-17 6,-24 1,-29 
+         C0,-26 0,-17 0,-8Z" />
+    <!-- Center bud petal -->
+    <path 
+      fill="#FF9473" 
+      stroke="#263D28" 
+      stroke-width="2"
+      d="M0,-9 
+         C-3,-18 -2,-24 0,-28 
+         C2,-24 3,-18 0,-9Z" />
+  </g>
+  
+  <!-- Far right small bud (lavender) -->
+  <g transform="translate(157,57) rotate(38) scale(0.52)">
+    <!-- Bud petals (closed tulip-like) -->
+    <!-- Left bud petal -->
+    <path 
+      fill="#A37ED4" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-8 
+         C-7,-17 -6,-24 -1,-29 
+         C0,-26 0,-17 0,-8Z" />
+    <!-- Right bud petal -->
+    <path 
+      fill="#A37ED4" 
+      stroke="#263D28" 
+      stroke-width="2.2"
+      d="M0,-8 
+         C7,-17 6,-24 1,-29 
+         C0,-26 0,-17 0,-8Z" />
+    <!-- Center bud petal -->
+    <path 
+      fill="#BFA1E0" 
+      stroke="#263D28" 
+      stroke-width="2"
+      d="M0,-9 
+         C-3,-18 -2,-24 0,-28 
+         C2,-24 3,-18 0,-9Z" />
+  </g>
+  
+</svg>

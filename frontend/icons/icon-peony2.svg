@@ -1,0 +1,683 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  width="200" 
+  height="220" 
+  viewBox="0 0 200 220">
+    
+  <!-- Stem -->
+  <path 
+    d="M100,122 L100,205" 
+    fill="transparent" 
+    stroke="#3D8B55" 
+    stroke-width="5.5" 
+    stroke-linecap="round" />
+    
+  <!-- Right leaf group -->
+  <g transform="translate(133,156) rotate(47)">
+    <!-- Leaf blade -->
+    <path 
+      d="M0,0 
+         C15,-20 33,-26 58,-4 
+         C49,13 26,18 0,0Z" 
+      fill="#3D8B55" 
+      stroke="#26303A" 
+      stroke-width="2.5" 
+      stroke-linejoin="round" />
+    <!-- Central vein -->
+    <path 
+      d="M2,0 
+         C12,-4 27,-3 54,-1" 
+      fill="transparent" 
+      stroke="#26303A" 
+      stroke-width="1.7" 
+      stroke-linecap="round" />
+  </g>
+    
+  <!-- Left leaf group -->
+  <g transform="translate(68,156) rotate(-47)">
+    <!-- Leaf blade -->
+    <path 
+      d="M0,0 
+         C15,-20 33,-26 58,-4 
+         C49,13 26,18 0,0Z" 
+      fill="#3D8B55" 
+      stroke="#26303A" 
+      stroke-width="2.5" 
+      stroke-linejoin="round" />
+    <!-- Central vein -->
+    <path 
+      d="M2,0 
+         C12,-4 27,-3 54,-1" 
+      fill="transparent" 
+      stroke="#26303A" 
+      stroke-width="1.7" 
+      stroke-linecap="round" />
+  </g>
+    
+  <!-- Outer layer of petals (12 petals, largest, offset 0°, scale 1.05) -->
+  <!-- Angle 0° -->
+  <g transform="translate(100,93) rotate(0) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 30° -->
+  <g transform="translate(100,93) rotate(30) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 60° -->
+  <g transform="translate(100,93) rotate(60) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 90° -->
+  <g transform="translate(100,93) rotate(90) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 120° -->
+  <g transform="translate(100,93) rotate(120) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 150° -->
+  <g transform="translate(100,93) rotate(150) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 180° -->
+  <g transform="translate(100,93) rotate(180) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 210° -->
+  <g transform="translate(100,93) rotate(210) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 240° -->
+  <g transform="translate(100,93) rotate(240) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 270° -->
+  <g transform="translate(100,93) rotate(270) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 300° -->
+  <g transform="translate(100,93) rotate(300) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 330° -->
+  <g transform="translate(100,93) rotate(330) scale(1.05)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#F07EA4" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+    
+  <!-- Middle layer of petals (12 petals, medium, offset 15°, scale 0.82) -->
+  <!-- Angle 15° -->
+  <g transform="translate(100,93) rotate(15) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 45° -->
+  <g transform="translate(100,93) rotate(45) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 75° -->
+  <g transform="translate(100,93) rotate(75) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 105° -->
+  <g transform="translate(100,93) rotate(105) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 135° -->
+  <g transform="translate(100,93) rotate(135) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 165° -->
+  <g transform="translate(100,93) rotate(165) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 195° -->
+  <g transform="translate(100,93) rotate(195) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 225° -->
+  <g transform="translate(100,93) rotate(225) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 255° -->
+  <g transform="translate(100,93) rotate(255) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 285° -->
+  <g transform="translate(100,93) rotate(285) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 315° -->
+  <g transform="translate(100,93) rotate(315) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 345° -->
+  <g transform="translate(100,93) rotate(345) scale(0.82)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#E15F92" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+    
+  <!-- Inner layer of petals (10 petals, smaller, offset 8°, scale 0.53) -->
+  <!-- Angle 8° -->
+  <g transform="translate(100,93) rotate(8) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 44° -->
+  <g transform="translate(100,93) rotate(44) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 80° -->
+  <g transform="translate(100,93) rotate(80) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 116° -->
+  <g transform="translate(100,93) rotate(116) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 152° -->
+  <g transform="translate(100,93) rotate(152) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 188° -->
+  <g transform="translate(100,93) rotate(188) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 224° -->
+  <g transform="translate(100,93) rotate(224) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 260° -->
+  <g transform="translate(100,93) rotate(260) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 296° -->
+  <g transform="translate(100,93) rotate(296) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 332° -->
+  <g transform="translate(100,93) rotate(332) scale(0.53)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#D24B7F" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+    
+  <!-- Innermost small petals (9 petals, smallest, offset 0°, scale 0.29) -->
+  <!-- Angle 0° -->
+  <g transform="translate(100,93) rotate(0) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 40° -->
+  <g transform="translate(100,93) rotate(40) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 80° -->
+  <g transform="translate(100,93) rotate(80) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 120° -->
+  <g transform="translate(100,93) rotate(120) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 160° -->
+  <g transform="translate(100,93) rotate(160) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 200° -->
+  <g transform="translate(100,93) rotate(200) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 240° -->
+  <g transform="translate(100,93) rotate(240) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 280° -->
+  <g transform="translate(100,93) rotate(280) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+  <!-- Angle 320° -->
+  <g transform="translate(100,93) rotate(320) scale(0.29)">
+    <path 
+      d="M0,0 
+         C-22,-30 -27,-52 -14,-73 
+         C-4,-84 5,-83 15,-70 
+         C26,-53 21,-26 0,0Z" 
+      fill="#C93F74" 
+      stroke="#26303A" 
+      stroke-width="2" 
+      stroke-linejoin="round" />
+  </g>
+    
+  <!-- Flower center base (slightly raised disk) -->
+  <ellipse 
+    rx="13.5" 
+    ry="12.5" 
+    cy="93" 
+    cx="100" 
+    fill="#F7C15F" 
+    stroke="#26303A" 
+    stroke-width="2.2" />
+    
+  <!-- Center stamens/dots (10 small elements for texture) -->
+  <!-- Angle 0° -->
+  <g transform="translate(100,93) rotate(0) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 36° -->
+  <g transform="translate(100,93) rotate(36) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 72° -->
+  <g transform="translate(100,93) rotate(72) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 108° -->
+  <g transform="translate(100,93) rotate(108) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 144° -->
+  <g transform="translate(100,93) rotate(144) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 180° -->
+  <g transform="translate(100,93) rotate(180) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 216° -->
+  <g transform="translate(100,93) rotate(216) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 252° -->
+  <g transform="translate(100,93) rotate(252) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 288° -->
+  <g transform="translate(100,93) rotate(288) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+  <!-- Angle 324° -->
+  <g transform="translate(100,93) rotate(324) translate(0,-14)">
+    <ellipse 
+      rx="2.8" 
+      ry="2.2" 
+      fill="#F8C05E" 
+      stroke="#26303A" 
+      stroke-width="1" />
+  </g>
+    
+</svg>

@@ -1,0 +1,280 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  width="200" 
+  height="200" 
+  viewBox="0 0 200 200">
+    
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Rose petal (outer/middle layers) - rounded, heart-like shape -->
+    <path 
+      id="outer-petal"
+      fill="#E74667"
+      stroke="#26303B"
+      stroke-width="2.8"
+      stroke-linejoin="round"
+      d="M0,0 
+         C-22,-28 -26,-50 0,-73 
+         C26,-50 22,-28 0,0 Z" />
+    
+    <!-- Inner petal - slightly smaller, darker for depth -->
+    <path 
+      id="inner-petal"
+      fill="#B72E4F"
+      stroke="#26303B"
+      stroke-width="2.5"
+      stroke-linejoin="round"
+      d="M0,0 
+         C-17,-24 -19,-42 0,-56 
+         C19,-42 17,-24 0,0 Z" />
+         
+    <!-- Leaf shape - elongated and pointed -->
+    <path 
+      id="leaf"
+      fill="#3D9654"
+      stroke="#26303B"
+      stroke-width="2.5"
+      stroke-linejoin="round"
+      d="M0,0 
+         C-18,-23 -22,-37 0,-57 
+         C22,-37 18,-23 0,0 Z" />
+  </defs>
+    
+  <!-- Stem - slightly curved, thick line from base of flower down -->
+  <path 
+    fill="transparent" 
+    stroke="#347C45" 
+    stroke-width="5.5" 
+    stroke-linecap="round" 
+    d="M100,138 
+       C93,156 108,169 99,200" />
+       
+  <!-- Left leaf (upper position, angled outward) -->
+  <g transform="translate(69,147) rotate(-108) scale(0.92)">
+    <!-- Leaf body -->
+    <use href="#leaf" />
+    <!-- Midrib vein for detail -->
+    <path 
+      fill="transparent" 
+      stroke="#26303B" 
+      stroke-width="1.7" 
+      stroke-linecap="round"
+      d="M0,0 L0,-53" />
+  </g>
+  
+  <!-- Right leaf (lower position, angled outward) -->
+  <g transform="translate(128,167) rotate(47) scale(0.85)">
+    <!-- Leaf body -->
+    <use href="#leaf" />
+    <!-- Midrib vein for detail -->
+    <path 
+      fill="transparent" 
+      stroke="#26303B" 
+      stroke-width="1.7" 
+      stroke-linecap="round"
+      d="M0,0 L0,-53" />
+  </g>
+       
+  <!-- Flower group - centered at (100, 83) -->
+  <g transform="translate(100,83)">
+    
+    <!-- Outer petal layer (largest, 12 petals, full rotation) -->
+    <!-- 0° -->
+    <g transform="rotate(0) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 30° -->
+    <g transform="rotate(30) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 60° -->
+    <g transform="rotate(60) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 90° -->
+    <g transform="rotate(90) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 120° -->
+    <g transform="rotate(120) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 150° -->
+    <g transform="rotate(150) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 180° -->
+    <g transform="rotate(180) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 210° -->
+    <g transform="rotate(210) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 240° -->
+    <g transform="rotate(240) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 270° -->
+    <g transform="rotate(270) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 300° -->
+    <g transform="rotate(300) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 330° -->
+    <g transform="rotate(330) scale(1.05)">
+      <use href="#outer-petal" />
+    </g>
+    
+    <!-- Middle petal layer (medium size, offset 15°, 12 petals) -->
+    <!-- 15° -->
+    <g transform="rotate(15) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 45° -->
+    <g transform="rotate(45) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 75° -->
+    <g transform="rotate(75) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 105° -->
+    <g transform="rotate(105) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 135° -->
+    <g transform="rotate(135) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 165° -->
+    <g transform="rotate(165) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 195° -->
+    <g transform="rotate(195) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 225° -->
+    <g transform="rotate(225) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 255° -->
+    <g transform="rotate(255) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 285° -->
+    <g transform="rotate(285) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 315° -->
+    <g transform="rotate(315) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    <!-- 345° -->
+    <g transform="rotate(345) scale(0.82)">
+      <use href="#outer-petal" />
+    </g>
+    
+    <!-- Inner petal layer (smaller, tighter, darker, offset 8°, 12 petals) -->
+    <!-- 8° -->
+    <g transform="rotate(8) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 38° -->
+    <g transform="rotate(38) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 68° -->
+    <g transform="rotate(68) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 98° -->
+    <g transform="rotate(98) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 128° -->
+    <g transform="rotate(128) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 158° -->
+    <g transform="rotate(158) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 188° -->
+    <g transform="rotate(188) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 218° -->
+    <g transform="rotate(218) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 248° -->
+    <g transform="rotate(248) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 278° -->
+    <g transform="rotate(278) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 308° -->
+    <g transform="rotate(308) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 338° -->
+    <g transform="rotate(338) scale(0.56)">
+      <use href="#inner-petal" />
+    </g>
+    
+    <!-- Center bud layer (very small, tight cluster, 10 petals) -->
+    <!-- 0° -->
+    <g transform="rotate(0) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 36° -->
+    <g transform="rotate(36) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 72° -->
+    <g transform="rotate(72) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 108° -->
+    <g transform="rotate(108) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 144° -->
+    <g transform="rotate(144) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 180° -->
+    <g transform="rotate(180) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 216° -->
+    <g transform="rotate(216) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 252° -->
+    <g transform="rotate(252) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 288° -->
+    <g transform="rotate(288) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    <!-- 324° -->
+    <g transform="rotate(324) scale(0.29)">
+      <use href="#inner-petal" />
+    </g>
+    
+    <!-- Very center circle for bud detail -->
+    <circle 
+      r="8.5" 
+      fill="#9E2544" 
+      stroke="#26303B" 
+      stroke-width="2.2" />
+  </g>
+</svg>
