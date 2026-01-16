@@ -1,28 +1,28 @@
 [
     {
         "id": "burgers",
-        "icon": "icons/icon-bouquet.svg",
+        "icon": "icons/icon-bouquet2.svg",
         "name": "Bouquet",
         "backgroundColor": "rgba(255,240,212,0.55)",
         "color": "#FFFFFF"
     },
     {
         "id": "pizza",
-        "icon": "icons/icon-rose.svg",
+        "icon": "icons/icon-rose2.svg",
         "name": "Rose",
         "backgroundColor": "rgba(128,0,32,0.55)",
         "color": "#FFFFFF"
     },
     {
         "id": "pasta",
-        "icon": "icons/icon-tulip.svg",
+        "icon": "icons/icon-tulip2.svg",
         "name": "Tulip",
         "backgroundColor": "rgba(255,191,0,0.55)",
         "color": "#FFFFFF"
     },
     {
         "id": "ice-cream",
-        "icon": "icons/icon-peony.svg",
+        "icon": "icons/icon-peony2.svg",
         "name": "Peony",
         "backgroundColor": "rgba(89,49,99,0.55)",
         "color": "#FFFFFF"
