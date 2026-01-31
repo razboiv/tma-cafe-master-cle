@@ -92,7 +92,7 @@ export class CartPage extends Route {
 
     #updateMainButton(cartItems) {
         if (cartItems.length > 0) {
-            TelegramSDK.showMainButton('CHECKOUT', () => {
+            TelegramSDK.showMainButton('Оплата при получении', () => {
                 TelegramSDK.setMainButtonLoading(true);
                 this.#createOrder(cartItems);
             });
@@ -115,20 +115,22 @@ export class CartPage extends Route {
     }
 
     #createOrder(cartItems) {
-        const data = {
-            _auth: TelegramSDK.getInitData(),
-            cartItems: cartItems
-        };
-        post('/order', JSON.stringify(data), (result) => {
-            if (result.ok) {
-                TelegramSDK.openInvoice(result.data.invoiceUrl, (status) => {
-                    this.#handleInvoiceStatus(status);
-                });
-            } else {
-                showSnackbar(result.error, 'error');
-            }
-        });
-    }
+    const data = {
+        _auth: TelegramSDK.getInitData(),
+        cartItems: cartItems,
+        payment_method: 'cash_on_delivery'
+    };
+
+    post('/order', JSON.stringify(data), (result) => {
+        if (result.ok) {
+            Cart.clear();
+            TelegramSDK.close();
+        } else {
+            TelegramSDK.setMainButtonLoading(false);
+            showSnackbar(result.error, 'error');
+        }
+    });
+}
 
     #handleInvoiceStatus(status) {
         if (status == 'paid') {
