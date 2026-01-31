@@ -118,7 +118,6 @@ export class CartPage extends Route {
     const data = {
         _auth: TelegramSDK.getInitData(),
         cartItems: cartItems,
-        payment_method: 'cash_on_delivery'
     };
 
     post('/order', JSON.stringify(data), (result) => {
