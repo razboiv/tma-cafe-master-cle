@@ -115,21 +115,22 @@ export class CartPage extends Route {
     }
 
     #createOrder(cartItems) {
-    const data = {
-        _auth: TelegramSDK.getInitData(),
-        cartItems: cartItems,
-    };
-
-    post('/order', JSON.stringify(data), (result) => {
-        if (result.ok) {
+        const data = {
+            _auth: TelegramSDK.getInitData(),
+            cartItems: cartItems
+        };
+        post('/order', JSON.stringify(data), (result) => {
+    if (result.ok) {
+        TelegramSDK.showPopup({
+            title: 'Заказ принят',
+            message: 'Мы получили ваш заказ и скоро свяжемся с вами',
+            buttons: [{ type: 'ok' }]
+        }, () => {
             Cart.clear();
             TelegramSDK.close();
-        } else {
-            TelegramSDK.setMainButtonLoading(false);
-            showSnackbar(result.error, 'error');
-        }
-    });
-}
+        });
+    }
+});
 
     #handleInvoiceStatus(status) {
         if (status == 'paid') {
