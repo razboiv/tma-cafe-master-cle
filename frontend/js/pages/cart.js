@@ -120,11 +120,31 @@ export class CartPage extends Route {
             cartItems: cartItems
         };
         post('/order', JSON.stringify(data), (result) => {
-    if (result.ok) {
-        Cart.clear();
-        TelegramSDK.close();
-    } else {
-        TelegramSDK.setMainButtonLoading(false);
-        showSnackbar(result.error, 'error');
+            if (result.ok) {
+                TelegramSDK.openInvoice(result.data.invoiceUrl, (status) => {
+                    this.#handleInvoiceStatus(status);
+                });
+            } else {
+                showSnackbar(result.error, 'error');
+            }
+        });
     }
-});
+
+    #handleInvoiceStatus(status) {
+        if (status == 'paid') {
+            Cart.clear();
+            TelegramSDK.close();
+        } else if (status == 'failed') {
+            TelegramSDK.setMainButtonLoading(false);
+            showSnackbar('Something went wrong, payment is unsuccessful :(', 'error');
+        } else {
+            TelegramSDK.setMainButtonLoading(false);
+            showSnackbar('The order was cancelled.', 'warning');
+        }
+    }
+
+    onClose() {
+        // Remove listener to prevent any updates here when page is not visible.
+        Cart.onItemsChangeListener = null;
+    }
+}
