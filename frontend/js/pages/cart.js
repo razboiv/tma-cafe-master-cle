@@ -121,13 +121,10 @@ export class CartPage extends Route {
         };
         post('/order', JSON.stringify(data), (result) => {
     if (result.ok) {
-        TelegramSDK.showPopup({
-            title: 'Заказ принят',
-            message: 'Мы получили ваш заказ и скоро свяжемся с вами',
-            buttons: [{ type: 'ok' }]
-        }, () => {
-            Cart.clear();
-            TelegramSDK.close();
-        });
+        Cart.clear();
+        TelegramSDK.close();
+    } else {
+        TelegramSDK.setMainButtonLoading(false);
+        showSnackbar(result.error, 'error');
     }
 });
