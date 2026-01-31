@@ -131,22 +131,3 @@ export class CartPage extends Route {
         });
     }
 });
-
-    #handleInvoiceStatus(status) {
-        if (status == 'paid') {
-            Cart.clear();
-            TelegramSDK.close();
-        } else if (status == 'failed') {
-            TelegramSDK.setMainButtonLoading(false);
-            showSnackbar('Something went wrong, payment is unsuccessful :(', 'error');
-        } else {
-            TelegramSDK.setMainButtonLoading(false);
-            showSnackbar('The order was cancelled.', 'warning');
-        }
-    }
-
-    onClose() {
-        // Remove listener to prevent any updates here when page is not visible.
-        Cart.onItemsChangeListener = null;
-    }
-}
